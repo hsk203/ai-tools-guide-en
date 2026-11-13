@@ -4,7 +4,7 @@
     "github": "https://github.com/hsk203/ai-tools-guide-en",
     "handle": "ai-tools-guide-en",
     "name": {
-      "en": "AI Tools Guide",
+      "en": "AI Tech Bar",
       "ja": "AI Tools Guide",
       "zh-CN": "AI Tools Guide",
       "zh-Hant": "AI Tools Guide"
@@ -48,8 +48,8 @@
       "zh-CN": ["AI tools guide"],
       "zh-Hant": ["AI tools guide"]
     },
-    "logoText": "AI Tools Guide",
-    "name": "AI Tools Guide"
+    "logoText": "AI Tech Bar",
+    "name": "AI Tech Bar"
   },
   "socialLinks": [
     {

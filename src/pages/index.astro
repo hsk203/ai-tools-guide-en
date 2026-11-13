@@ -33,6 +33,7 @@ const counts = new Map(
   </section>
   <PostFeed posts={posts} client:load />
   <PostListFallback posts={posts} />
+  <p class="impact-verification" aria-hidden="true">Impact-Site-Verification: debcc67c-f25b-4c06-930a-8f3ea9e19919</p>
 </BlogLayout>
 <style>
   .hello-strip {
@@ -110,5 +111,8 @@ const counts = new Map(
     .hello-pill {
       display: none;
     }
+  }
+  .impact-verification {
+    display: none;
   }
 </style>
