@@ -6,7 +6,7 @@ lang: en
 category: comparisons
 tags: ["Higgsfield", "Runway", "Kling", "AI video", "product ads"]
 cover: tool
-coverImage: "/images/tools/higgsfield-katana/home.webp"
+coverImage: "/images/tools/runway/home.webp"
 featured: false
 draft: false
 ---
@@ -69,6 +69,8 @@ Annual billing saves 20 percent on Runway. Credit expiry is the key differentiat
 | Ultra+       | $402–$432.99 first month (sources differ) | $544.99/mo        | $408.58/mo reported                           | 57,000 credits/mo                                                                                                                   |
 
 Kling's first-month discounts are one-time only, and renewal is materially higher: Standard goes from $6.99 to $8.80, Pro from $25.99 to $32.56. Annual billing saves about 25 percent. The Premier 28K and 38K prices are third-party only and unverified, so they are not listed as fact here. The Ultra+ first-month price differs across sources ($402 versus $432.99), so treat it as approximate. Ultra+ replaced the old Ultra 26,000-credit plan around 18 October 2026, with 57,000 credits a month. Subscription credits expire after one month with no rollover; purchased credits are valid for two years, and failed generations are refunded, according to Kling's credit policy as reported by third-party reviews.
+
+![Kling homepage](/images/tools/kling/home.webp)
 
 ## What a 10-second clip actually costs on each platform
 
