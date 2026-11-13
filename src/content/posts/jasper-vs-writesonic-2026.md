@@ -13,6 +13,7 @@ tags:
     "content marketing",
   ]
 cover: tool
+coverImage: "/images/tools/jasper-agents/home.webp"
 featured: false
 draft: false
 ---

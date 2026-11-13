@@ -6,6 +6,7 @@ lang: en
 category: tutorials
 tags: ["Jasper", "Brand Voice", "AI writing", "content marketing", "tutorials"]
 cover: tool
+coverImage: "/images/tools/jasper-agents/feature.webp"
 featured: false
 draft: false
 ---

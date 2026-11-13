@@ -6,6 +6,7 @@ lang: en
 category: reviews
 tags: ["Higgsfield", "AI video", "pricing", "Seedance", "Veo 3.1"]
 cover: tool
+coverImage: "/images/tools/higgsfield-katana/home.webp"
 featured: false
 draft: false
 ---

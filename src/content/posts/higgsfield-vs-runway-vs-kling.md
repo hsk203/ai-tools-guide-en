@@ -6,6 +6,7 @@ lang: en
 category: comparisons
 tags: ["Higgsfield", "Runway", "Kling", "AI video", "product ads"]
 cover: tool
+coverImage: "/images/tools/higgsfield-katana/home.webp"
 featured: false
 draft: false
 ---

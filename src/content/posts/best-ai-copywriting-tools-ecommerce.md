@@ -14,6 +14,7 @@ tags:
     "AI copywriting",
   ]
 cover: tool
+coverImage: "/images/tools/writesonic/feature.webp"
 featured: false
 draft: false
 ---

@@ -7,6 +7,7 @@ category: workflows
 tags:
   ["video ads", "Higgsfield", "Writesonic", "content repurposing", "workflows"]
 cover: tool
+coverImage: "/images/tools/writesonic/pricing.webp"
 featured: false
 draft: false
 ---

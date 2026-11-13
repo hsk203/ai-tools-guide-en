@@ -6,6 +6,7 @@ lang: en
 category: tutorials
 tags: ["Writesonic", "free trial", "AI writing", "pricing", "tutorials"]
 cover: tool
+coverImage: "/images/tools/writesonic/home.webp"
 featured: false
 draft: false
 ---

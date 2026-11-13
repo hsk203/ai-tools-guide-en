@@ -6,6 +6,7 @@ lang: en
 category: comparisons
 tags: ["Semrush", "Jasper", "SEO", "content marketing", "blog workflow"]
 cover: tool
+coverImage: "/images/tools/content-toolkit/home.webp"
 featured: false
 draft: false
 ---

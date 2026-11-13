@@ -13,6 +13,7 @@ tags:
     "AI writing",
   ]
 cover: tool
+coverImage: "/images/tools/content-toolkit/pricing.webp"
 featured: false
 draft: false
 ---

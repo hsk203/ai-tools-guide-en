@@ -6,6 +6,7 @@ lang: en
 category: comparisons
 tags: ["Grammarly", "Writesonic", "content teams", "AI writing", "editing"]
 cover: tool
+coverImage: "/images/tools/grammarly-ai-agents/home.webp"
 featured: false
 draft: false
 ---
