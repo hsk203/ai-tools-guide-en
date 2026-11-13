@@ -1,0 +1,74 @@
+{
+  "author": {
+    "avatar": "/images/avatar.svg",
+    "github": "https://github.com/hsk203/ai-tools-guide-en",
+    "handle": "ai-tools-guide-en",
+    "name": {
+      "en": "AI Tools Guide",
+      "ja": "AI Tools Guide",
+      "zh-CN": "AI Tools Guide",
+      "zh-Hant": "AI Tools Guide"
+    }
+  },
+  "hero": {
+    "image": "/images/hero.webp"
+  },
+  "language": "en",
+  "navigation": [
+    {
+      "icon": "icon-[bx--bxs-home-circle]",
+      "label": "nav.home",
+      "url": "/"
+    },
+    {
+      "icon": "icon-[material-symbols--article]",
+      "label": "nav.posts",
+      "url": "/posts/"
+    },
+    {
+      "icon": "icon-[mynaui--indifferent-ghost-solid]",
+      "label": "nav.about",
+      "url": "/about/"
+    }
+  ],
+  "site": {
+    "favicon": "/favicon.svg",
+    "keywords": {
+      "en": [
+        "AI writing tools comparison",
+        "Jasper vs Writesonic",
+        "AI video generator comparison",
+        "Higgsfield pricing",
+        "Semrush Content Toolkit",
+        "Grammarly Pro",
+        "AI tools for content teams",
+        "AI workflow tutorials"
+      ],
+      "ja": ["AI tools guide"],
+      "zh-CN": ["AI tools guide"],
+      "zh-Hant": ["AI tools guide"]
+    },
+    "logoText": "AI Tools Guide",
+    "name": "AI Tools Guide"
+  },
+  "socialLinks": [
+    {
+      "icon": "icon-[jam--github]",
+      "label": "",
+      "name": "GitHub",
+      "url": "$author.github"
+    },
+    {
+      "icon": "icon-[lucide--rss]",
+      "label": "common.rss",
+      "name": "RSS",
+      "url": "/rss.xml"
+    }
+  ],
+  "text": {
+    "en": {},
+    "ja": {},
+    "zh-CN": {},
+    "zh-Hant": {}
+  }
+}
