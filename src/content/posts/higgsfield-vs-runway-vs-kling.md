@@ -13,12 +13,26 @@ draft: false
 
 ## Verdict & Pricing Snapshot
 
-|                                  | Higgsfield Plus                                    | Runway Pro                                             | Kling Pro                                             |
-| -------------------------------- | -------------------------------------------------- | ------------------------------------------------------ | ----------------------------------------------------- |
-| **Starting paid price (annual)** | $47/mo for 1,200 credits                           | $28/mo for 2,250 credits                               | $24.42/mo for 3,000 credits                           |
-| **Free tier**                    | $0, 0 credits, image only                          | $0, 125 one-time credits                               | $0, watermarked, no 4.0 credits                       |
-| **Flagship 10-second clip**      | Seedance 2.5 720p: about 70 credits                | Gen-4.5: about 120 credits                             | Kling 4.0 1080p: about 150 credits (third-party rate) |
-| **Who should skip**              | Creators who need one model cheaply at high volume | Creators who need credits to roll over on a cheap plan | Creators who need many models in one place            |
+### Higgsfield Plus
+
+- **Starting paid price (annual)**: $47/mo for 1,200 credits
+- **Free tier**: $0, 0 credits, image only
+- **Flagship 10-second clip**: Seedance 2.5 720p: about 70 credits
+- **Who should skip**: Creators who need one model cheaply at high volume
+
+### Runway Pro
+
+- **Starting paid price (annual)**: $28/mo for 2,250 credits
+- **Free tier**: $0, 125 one-time credits
+- **Flagship 10-second clip**: Gen-4.5: about 120 credits
+- **Who should skip**: Creators who need credits to roll over on a cheap plan
+
+### Kling Pro
+
+- **Starting paid price (annual)**: $24.42/mo for 3,000 credits
+- **Free tier**: $0, watermarked, no 4.0 credits
+- **Flagship 10-second clip**: Kling 4.0 1080p: about 150 credits (third-party rate)
+- **Who should skip**: Creators who need many models in one place
 
 **The short answer:** there is no single winner, because the three platforms do not sell the same thing. Higgsfield wins on model choice — Seedance, Kling, Veo, Wan, and more under one credit balance. Runway wins on a coherent, professional workflow with Gen-4.5, Brand Kits, and voice clones, plus the only rollover in this comparison on its Max plan. Kling wins on the cheapest entry price and the cheapest high-volume credits, if you are happy rendering in Kling's own models. The cheapest 10-second clip depends on the model, not the plan: a Kling 3.0 clip on Higgsfield costs about 14 to 15 credits, the same length in Runway's Gen-4.5 costs about 120 credits, and in Kling 4.0 at 1080p it costs about 150 credits at a third-party-reported rate. Pick the model first, then pick the platform that sells it cheapest.
 
@@ -34,24 +48,63 @@ Kling is a single-model platform — Kling 4.0, launched 15 October 2026 — sol
 
 ### Higgsfield
 
-| Plan    | Monthly | Annual (per month)          | Key limits                                                                                                                                                                                          |
-| ------- | ------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Free    | $0      | $0                          | 0 credits; limited use; 1 concurrent job; watermark on every generation; no commercial use; image models only (no video)                                                                            |
-| Starter | $19/mo  | $19/mo (no annual discount) | 270 credits/mo; selected models only (Seedance 2.0 Fast and Mini, Kling 3.0 at 720p only, Wan, Grok Video, Nano Banana 2); 2 parallel video jobs, 4 images; commercial use included; watermark-free |
-| Plus    | $59/mo  | $47/mo                      | 1,200 credits/mo; all models (including Seedance 2.5 at 1080p, Veo 3.1, Kling 3.0 at 1080p/4K with Motion Control); 6 parallel video jobs; 7-day Unlimited on selected models (web only)            |
-| Ultra   | $129/mo | $99/mo                      | 3,000 credits/mo (larger 6,000- and 9,000-credit sizes available at higher prices, up to about $375 a month reported); all models; 8 parallel video jobs; 7-day Unlimited including Nano Banana Pro |
+#### Free
 
-Higgsfield repriced in late October 2026. Sources from September to 27 October list Starter at $15 a month with 200 credits and Plus at $39 to $49 a month with 1,000 credits. Sources from 28 October to 9 November list the figures in the table above, which are used here as current. The official pricing page rendered almost empty when opened on 2026-11-13, so these figures rest on Higgsfield's own pricing guide and multiple independent November 2026 reviews. Check the official site before you pay. Starter has no annual discount. Plus and Ultra save 20 percent annually. Unused credits do not roll over — they reset every month, every 30 days even on annual plans.
+- **Monthly**: $0
+- **Annual (per month)**: $0
+- **Key limits**: 0 credits; limited use; 1 concurrent job; watermark on every generation; no commercial use; image models only (no video)
+
+#### Starter
+
+- **Monthly**: $19/mo
+- **Annual (per month)**: $19/mo (no annual discount)
+- **Key limits**: 270 credits/mo; selected models only (Seedance 2.0 Fast and Mini, Kling 3.0 at 720p only, Wan, Grok Video, Nano Banana 2); 2 parallel video jobs, 4 images; commercial use included; watermark-free
+
+#### Plus
+
+- **Monthly**: $59/mo
+- **Annual (per month)**: $47/mo
+- **Key limits**: 1,200 credits/mo; all models (including Seedance 2.5 at 1080p, Veo 3.1, Kling 3.0 at 1080p/4K with Motion Control); 6 parallel video jobs; 7-day Unlimited on selected models (web only)
+
+#### Ultra
+
+- **Monthly**: $129/mo
+- **Annual (per month)**: $99/mo
+- **Key limits**: 3,000 credits/mo (larger 6,000- and 9,000-credit sizes available at higher prices, up to about $375 a month reported); all models; 8 parallel video jobs; 7-day Unlimited including Nano Banana Pro
+
+Higgsfield repriced in late October 2026. Sources from September to 27 October list Starter at $15 a month with 200 credits and Plus at $39 to $49 a month with 1,000 credits. Sources from 28 October to 9 November list the figures in the cards above, which are used here as current. The official pricing page rendered almost empty when opened on 2026-11-13, so these figures rest on Higgsfield's own pricing guide and multiple independent November 2026 reviews. Check the official site before you pay. Starter has no annual discount. Plus and Ultra save 20 percent annually. Unused credits do not roll over — they reset every month, every 30 days even on annual plans.
 
 ### Runway
 
-| Plan       | Monthly | Annual (per month) | Key limits                                                                                                                                                                   |
-| ---------- | ------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Free       | $0      | $0                 | 125 one-time credits (non-renewable, do not expire); selection of models to test; 5 GB storage; watermarked output (third-party)                                             |
-| Standard   | $15/mo  | $12/mo ($144/yr)   | 625 credits/mo; 5 parallel generations; up to 3 projects; 20 GB storage; no watermarks; 4K upscaling                                                                         |
-| Pro        | $35/mo  | $28/mo ($336/yr)   | 2,250 credits/mo; 15 parallel generations; up to 5 projects; 100 GB storage; 1 Brand Kit; 1 custom voice clone; Runway MCP; top-up credits anytime                           |
-| Max        | $95/mo  | $76/mo ($912/yr)   | 9,500 credits/mo; 20 parallel generations; up to 10 projects; 500 GB storage; up to 3 Brand Kits and 3 voice clones; HDR, ProRes, image sequences; credits roll over 1 month |
-| Enterprise | Custom  | Custom             | API access is reported to be Enterprise-only (third-party)                                                                                                                   |
+#### Free
+
+- **Monthly**: $0
+- **Annual (per month)**: $0
+- **Key limits**: 125 one-time credits (non-renewable, do not expire); selection of models to test; 5 GB storage; watermarked output (third-party)
+
+#### Standard
+
+- **Monthly**: $15/mo
+- **Annual (per month)**: $12/mo ($144/yr)
+- **Key limits**: 625 credits/mo; 5 parallel generations; up to 3 projects; 20 GB storage; no watermarks; 4K upscaling
+
+#### Pro
+
+- **Monthly**: $35/mo
+- **Annual (per month)**: $28/mo ($336/yr)
+- **Key limits**: 2,250 credits/mo; 15 parallel generations; up to 5 projects; 100 GB storage; 1 Brand Kit; 1 custom voice clone; Runway MCP; top-up credits anytime
+
+#### Max
+
+- **Monthly**: $95/mo
+- **Annual (per month)**: $76/mo ($912/yr)
+- **Key limits**: 9,500 credits/mo; 20 parallel generations; up to 10 projects; 500 GB storage; up to 3 Brand Kits and 3 voice clones; HDR, ProRes, image sequences; credits roll over 1 month
+
+#### Enterprise
+
+- **Monthly**: Custom
+- **Annual (per month)**: Custom
+- **Key limits**: API access is reported to be Enterprise-only (third-party)
 
 Runway's pricing was confirmed against the official pricing page on 2026-11-13, which shows Free, Standard, Pro, and Max only. The old Unlimited plan is gone. It was retired and replaced by Max, with existing Unlimited subscribers migrated around 1 September 2026. The old Unlimited plan cost $95 a month with the same 2,250 credits as Pro plus Explore Mode. Max costs the same $95 a month on monthly billing but gives 9,500 credits and a one-month rollover. Any comparison still listing "Unlimited" as a current Runway plan is stale.
 
@@ -59,14 +112,47 @@ Annual billing saves 20 percent on Runway. Credit expiry is the key differentiat
 
 ### Kling
 
-| Plan         | First month                               | Monthly (renewal) | Annual (per month)                            | Key limits                                                                                                                          |
-| ------------ | ----------------------------------------- | ----------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Basic (Free) | $0                                        | $0                | $0                                            | Monthly free credits (amount unverified); watermarked; no free 4.0 credits; no 1080p or 4K, no watermark removal, no commercial use |
-| Standard     | $6.99                                     | $8.80/mo          | $6.60/mo ($79.20/yr)                          | 660 credits/mo; 50 Elements                                                                                                         |
-| Pro          | $25.99                                    | $32.56/mo         | $24.42/mo ($293.04/yr)                        | 3,000 credits/mo; 150 Elements; 10% Kling 4.0 discount reported October 2026 (time-limited)                                         |
-| Premier 8K   | $64.99                                    | $80.96/mo         | $60.72/mo                                     | 8,000 credits/mo                                                                                                                    |
-| Premier 18K  | $144.99                                   | $181.99/mo        | About $124.20/mo (first year $1,490 reported) | 18,000 credits/mo                                                                                                                   |
-| Ultra+       | $402–$432.99 first month (sources differ) | $544.99/mo        | $408.58/mo reported                           | 57,000 credits/mo                                                                                                                   |
+#### Basic (Free)
+
+- **First month**: $0
+- **Monthly (renewal)**: $0
+- **Annual (per month)**: $0
+- **Key limits**: Monthly free credits (amount unverified); watermarked; no free 4.0 credits; no 1080p or 4K, no watermark removal, no commercial use
+
+#### Standard
+
+- **First month**: $6.99
+- **Monthly (renewal)**: $8.80/mo
+- **Annual (per month)**: $6.60/mo ($79.20/yr)
+- **Key limits**: 660 credits/mo; 50 Elements
+
+#### Pro
+
+- **First month**: $25.99
+- **Monthly (renewal)**: $32.56/mo
+- **Annual (per month)**: $24.42/mo ($293.04/yr)
+- **Key limits**: 3,000 credits/mo; 150 Elements; 10% Kling 4.0 discount reported October 2026 (time-limited)
+
+#### Premier 8K
+
+- **First month**: $64.99
+- **Monthly (renewal)**: $80.96/mo
+- **Annual (per month)**: $60.72/mo
+- **Key limits**: 8,000 credits/mo
+
+#### Premier 18K
+
+- **First month**: $144.99
+- **Monthly (renewal)**: $181.99/mo
+- **Annual (per month)**: About $124.20/mo (first year $1,490 reported)
+- **Key limits**: 18,000 credits/mo
+
+#### Ultra+
+
+- **First month**: $402–$432.99 first month (sources differ)
+- **Monthly (renewal)**: $544.99/mo
+- **Annual (per month)**: $408.58/mo reported
+- **Key limits**: 57,000 credits/mo
 
 Kling's first-month discounts are one-time only, and renewal is materially higher: Standard goes from $6.99 to $8.80, Pro from $25.99 to $32.56. Annual billing saves about 25 percent. The Premier 28K and 38K prices are third-party only and unverified, so they are not listed as fact here. The Ultra+ first-month price differs across sources ($402 versus $432.99), so treat it as approximate. Ultra+ replaced the old Ultra 26,000-credit plan around 18 October 2026, with 57,000 credits a month. Subscription credits expire after one month with no rollover; purchased credits are valid for two years, and failed generations are refunded, according to Kling's credit policy as reported by third-party reviews.
 
@@ -74,21 +160,62 @@ Kling's first-month discounts are one-time only, and renewal is materially highe
 
 ## What a 10-second clip actually costs on each platform
 
-This table is the heart of the comparison. Credits are not interchangeable across platforms — a Higgsfield credit, a Runway credit, and a Kling credit are three different units — so the only honest comparison is cost per finished clip at a given length and quality.
+These cards are the heart of the comparison. Credits are not interchangeable across platforms — a Higgsfield credit, a Runway credit, and a Kling credit are three different units — so the only honest comparison is cost per finished clip at a given length and quality.
 
-| Platform and model                          | Cost per 10 seconds                      | Source status                                                                           |
-| ------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------- |
-| Higgsfield, Kling 3.0, 720p                 | About 14–15 credits                      | Generate-button figure, 9 Nov 2026                                                      |
-| Higgsfield, Seedance 2.0 Fast, 720p         | About 24 credits                         | Pricing page / Generate button, Nov 2026                                                |
-| Higgsfield, Kling 4.0 via Higgsfield, 1080p | About 32.5 credits                       | Generate-button figure, 2 Nov 2026                                                      |
-| Higgsfield, Seedance 2.0, 720p              | About 44 credits                         | Pricing page / Generate button, Nov 2026                                                |
-| Higgsfield, Seedance 2.5, 720p              | About 70 credits                         | Pricing page / Generate button, Nov 2026; multiple sources agree                        |
-| Higgsfield, Veo 3.1, 720p                   | About 73–100 credits                     | Range across sources; use about 40 credits per 4 seconds as the sourced figure          |
-| Runway, Gen-4.5                             | About 120 credits (12 credits/sec)       | Official FAQ, confirmed 2026-11-13                                                      |
-| Runway, Gen-4 (non-Turbo)                   | About 120 credits (about 12 credits/sec) | Official page: 9,500 credits = 791 seconds                                              |
-| Runway, Gen-4 Turbo                         | About 50–60 credits                      | About 5–6 credits/sec; exact rate unverified — official page implies 5–6 inconsistently |
-| Kling, Kling 4.0, 720p                      | About 100 credits (10 credits/sec)       | Third-party in-app check, NOT official                                                  |
-| Kling, Kling 4.0, 1080p                     | About 150 credits (15 credits/sec)       | Third-party in-app check, NOT official                                                  |
+### Higgsfield, Kling 3.0, 720p
+
+- **Cost per 10 seconds**: About 14–15 credits
+- **Source status**: Generate-button figure, 9 Nov 2026
+
+### Higgsfield, Seedance 2.0 Fast, 720p
+
+- **Cost per 10 seconds**: About 24 credits
+- **Source status**: Pricing page / Generate button, Nov 2026
+
+### Higgsfield, Kling 4.0 via Higgsfield, 1080p
+
+- **Cost per 10 seconds**: About 32.5 credits
+- **Source status**: Generate-button figure, 2 Nov 2026
+
+### Higgsfield, Seedance 2.0, 720p
+
+- **Cost per 10 seconds**: About 44 credits
+- **Source status**: Pricing page / Generate button, Nov 2026
+
+### Higgsfield, Seedance 2.5, 720p
+
+- **Cost per 10 seconds**: About 70 credits
+- **Source status**: Pricing page / Generate button, Nov 2026; multiple sources agree
+
+### Higgsfield, Veo 3.1, 720p
+
+- **Cost per 10 seconds**: About 73–100 credits
+- **Source status**: Range across sources; use about 40 credits per 4 seconds as the sourced figure
+
+### Runway, Gen-4.5
+
+- **Cost per 10 seconds**: About 120 credits (12 credits/sec)
+- **Source status**: Official FAQ, confirmed 2026-11-13
+
+### Runway, Gen-4 (non-Turbo)
+
+- **Cost per 10 seconds**: About 120 credits (about 12 credits/sec)
+- **Source status**: Official page: 9,500 credits = 791 seconds
+
+### Runway, Gen-4 Turbo
+
+- **Cost per 10 seconds**: About 50–60 credits
+- **Source status**: About 5–6 credits/sec; exact rate unverified — official page implies 5–6 inconsistently
+
+### Kling, Kling 4.0, 720p
+
+- **Cost per 10 seconds**: About 100 credits (10 credits/sec)
+- **Source status**: Third-party in-app check, NOT official
+
+### Kling, Kling 4.0, 1080p
+
+- **Cost per 10 seconds**: About 150 credits (15 credits/sec)
+- **Source status**: Third-party in-app check, NOT official
 
 Read the Kling row carefully. The 10-credits-a-second at 720p and 15 at 1080p figures were checked inside Kling's video generator by Quantslant on 15 October 2026 and corroborated by useapi.net on 5 November 2026. Kling's membership page and 4.0 user guide do not print a per-clip rate, and multiple November 2026 reviews confirm that. So the Kling figures are a third-party in-app check, not an official published rate. Do not budget a large Kling spend without running a test generation first. The same caution applies to Kling 4.0 Flash, a cheaper 720p-only variant reported at 6 credits a second by useapi.net — third-party only. Reseller and API rates use different credit systems and must not be mixed in: Kling's own developer API bills 1 unit a second at 720p and 1.5 at 1080p at about $0.154 a unit, and some resellers quote 7 credits a second at 720p. Those are reseller credits, not Kling subscription credits.
 

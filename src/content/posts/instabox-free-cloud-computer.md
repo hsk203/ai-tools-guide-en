@@ -93,11 +93,9 @@ One more warning: the free policy can be pulled at any time. InstaBox's own word
 
 ## How it compares to other free options
 
-| Product | The difference in one line |
-| --- | --- |
-| **Simular Box** (box.simular.ai) | Also a free cloud Linux desktop for AI, but all agents share one computer through a single MCP link; InstaBox gives each agent its own VM. Note: Simular's free beta ended on November 12, 2026, and daily credits no longer refresh |
-| **Cube** (cube.computer) | A persistent cloud Linux computer with specs up to 32 vCPU / 64 GB; new users get a $25 free credit and sign-up is open with no invite. More of a general-purpose cloud PC than an agent sandbox |
-| **Oracle Cloud Always Free** | A real free VPS: 2 OCPU / 12 GB ARM instance + 200 GB storage, with a dedicated public IPv4 and no auto-pause — good for 24/7 workloads. The catch is that the Singapore region is often out of capacity, so you may wait a long time for an instance |
+- **Simular Box** (box.simular.ai): Also a free cloud Linux desktop for AI, but all agents share one computer through a single MCP link; InstaBox gives each agent its own VM. Note: Simular's free beta ended on November 12, 2026, and daily credits no longer refresh
+- **Cube** (cube.computer): A persistent cloud Linux computer with specs up to 32 vCPU / 64 GB; new users get a $25 free credit and sign-up is open with no invite. More of a general-purpose cloud PC than an agent sandbox
+- **Oracle Cloud Always Free**: A real free VPS: 2 OCPU / 12 GB ARM instance + 200 GB storage, with a dedicated public IPv4 and no auto-pause — good for 24/7 workloads. The catch is that the Singapore region is often out of capacity, so you may wait a long time for an instance
 
 The three serve different needs: InstaBox for an independent agent sandbox, Cube for a general cloud PC, Oracle's free tier for a 24/7 VPS.
 

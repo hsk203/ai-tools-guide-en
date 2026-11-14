@@ -15,14 +15,12 @@ Search for "Writesonic free plan" and you will find dozens of articles describin
 
 ## Verdict & Pricing Snapshot
 
-|                         |                                                                                                                     |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Permanent free tier** | None — the old Free/Lite tiers have been dropped                                                                    |
-| **Free trial**          | Yes, no credit card required (official FAQ: "No. Sign up and explore Writesonic with full access. No credit card.") |
-| **Refund**              | 7-day, no-questions-asked refund on paid plans                                                                      |
-| **Cheapest paid plan**  | Starter: $99/mo monthly, $79/mo on annual billing                                                                   |
-| **Starter includes**    | 15 AI articles/mo; 50 tracked prompts; 10 site audits/mo (100 pages each); 1 user, 1 project, 1 brand voice         |
-| **What expires**        | Monthly article, prompt, and audit allowances expire at month end — no rollover                                     |
+- **Permanent free tier**: None — the old Free/Lite tiers have been dropped
+- **Free trial**: Yes, no credit card required (official FAQ: "No. Sign up and explore Writesonic with full access. No credit card.")
+- **Refund**: 7-day, no-questions-asked refund on paid plans
+- **Cheapest paid plan**: Starter: $99/mo monthly, $79/mo on annual billing
+- **Starter includes**: 15 AI articles/mo; 50 tracked prompts; 10 site audits/mo (100 pages each); 1 user, 1 project, 1 brand voice
+- **What expires**: Monthly article, prompt, and audit allowances expire at month end — no rollover
 
 **Who should use the trial:** freelancers and small teams who want to test AI article generation, GEO tracking, and site audits in one place before committing to $79–$99 a month. **Who should skip it:** anyone looking for a permanently free AI writer — that product no longer exists here, and Grammarly Free ($0, 100 AI prompts a month) is the honest alternative for free use. If you are comparing Writesonic against Jasper before you spend anything, see [Jasper vs. Writesonic](/posts/jasper-vs-writesonic-2026/); if your job is product descriptions rather than articles, see our [ecommerce copywriting roundup](/posts/best-ai-copywriting-tools-ecommerce/).
 
@@ -62,7 +60,7 @@ This is the part most "free plan" articles get wrong, so here it is plainly:
 
 If the trial convinces you, Starter is the entry point. Here is what its limits mean in practice:
 
-**15 AI articles a month.** That is roughly one article every two working days. For a solo blogger publishing twice a week, it is enough. For a content team publishing daily, it is not — Basic ($249/mo monthly, $199/mo annual) raises the cap to 25 articles, and Growth ($499/mo monthly, $399/mo annual) to 50. Be honest about your real publishing volume before choosing: the difference between 15 and 25 articles a month is $150 a month, and buying the wrong tier is the most expensive mistake in this pricing table.
+**15 AI articles a month.** That is roughly one article every two working days. For a solo blogger publishing twice a week, it is enough. For a content team publishing daily, it is not — Basic ($249/mo monthly, $199/mo annual) raises the cap to 25 articles, and Growth ($499/mo monthly, $399/mo annual) to 50. Be honest about your real publishing volume before choosing: the difference between 15 and 25 articles a month is $150 a month, and buying the wrong tier is the most expensive mistake in the pricing cards below.
 
 **50 tracked prompts.** GEO tracking covers ChatGPT, Gemini, and Google AI Overviews on Starter. Fifty prompts means fifty questions you monitor for brand visibility — enough to track your core topics, not enough to track every long-tail query. Enterprise adds Perplexity, Claude, Grok, DeepSeek, Copilot, Meta AI, and Google AI Mode, for a total of 8 tracked platforms.
 
@@ -90,12 +88,41 @@ A trial without a plan wastes itself. You have limited time and unknown limits, 
 
 ## The cost of staying: Starter vs. Basic vs. Growth
 
-| Plan           | Monthly | Annual (per month) | AI articles/mo | Tracked prompts | Site audits/mo   | Extra users               |
-| -------------- | ------- | ------------------ | -------------- | --------------- | ---------------- | ------------------------- |
-| **Starter**    | $99     | $79                | 15             | 50              | 10 × 100 pages   | None — add-on unavailable |
-| **Basic**      | $249    | $199               | 25             | 100             | 20 × 1,200 pages | Up to 3 at $50/user/mo    |
-| **Growth**     | $499    | $399               | 50             | 200             | 50 × 2,500 pages | Up to 2 at $50/user/mo    |
-| **Enterprise** | Custom  | Custom             | Custom         | 8 platforms     | Custom           | Custom                    |
+### Starter
+
+- **Monthly**: $99
+- **Annual (per month)**: $79
+- **AI articles/mo**: 15
+- **Tracked prompts**: 50
+- **Site audits/mo**: 10 × 100 pages
+- **Extra users**: None — add-on unavailable
+
+### Basic
+
+- **Monthly**: $249
+- **Annual (per month)**: $199
+- **AI articles/mo**: 25
+- **Tracked prompts**: 100
+- **Site audits/mo**: 20 × 1,200 pages
+- **Extra users**: Up to 3 at $50/user/mo
+
+### Growth
+
+- **Monthly**: $499
+- **Annual (per month)**: $399
+- **AI articles/mo**: 50
+- **Tracked prompts**: 200
+- **Site audits/mo**: 50 × 2,500 pages
+- **Extra users**: Up to 2 at $50/user/mo
+
+### Enterprise
+
+- **Monthly**: Custom
+- **Annual (per month)**: Custom
+- **AI articles/mo**: Custom
+- **Tracked prompts**: 8 platforms
+- **Site audits/mo**: Custom
+- **Extra users**: Custom
 
 Cost per article on annual billing: Starter $5.27 per article ($79 ÷ 15), Basic $7.96 ($199 ÷ 25), Growth $7.98 ($399 ÷ 50). Starter is the cheapest per article — but only if you use all 15. If you publish 8 articles a month on Starter, your real cost is $9.88 per article. Unused articles expire at month end with no rollover, so the plan you need is the one whose cap is just above your real volume, not the one with the lowest sticker price.
 

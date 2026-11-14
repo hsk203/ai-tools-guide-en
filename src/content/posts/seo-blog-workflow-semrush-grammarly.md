@@ -22,10 +22,17 @@ Most SEO blog workflows fail in the same place: the handoff. The brief lives in 
 
 ## Verdict & Pricing Snapshot
 
-| Tool                        | Starting price                                   | Free trial                                                 | The limit that matters                                    |
-| --------------------------- | ------------------------------------------------ | ---------------------------------------------------------- | --------------------------------------------------------- |
-| **Semrush Content Toolkit** | $60/mo on annual billing                         | 7 days                                                     | 5 SEO-boosted articles/mo; unlimited standard AI articles |
-| **Grammarly Pro**           | $12/member/mo on annual billing ($144/member/yr) | Try for free, with an email reminder 2 days before it ends | 2,000 AI prompts/member/mo; 1 style guide, 1 brand tone   |
+### Semrush Content Toolkit
+
+- **Starting price**: $60/mo on annual billing
+- **Free trial**: 7 days
+- **The limit that matters**: 5 SEO-boosted articles/mo; unlimited standard AI articles
+
+### Grammarly Pro
+
+- **Starting price**: $12/member/mo on annual billing ($144/member/yr)
+- **Free trial**: Try for free, with an email reminder 2 days before it ends
+- **The limit that matters**: 2,000 AI prompts/member/mo; 1 style guide, 1 brand tone
 
 **Who should use this workflow:** a solo creator or small team publishing 4–5 SEO articles a month who wants keyword-backed briefs and a real editing pass without hiring an editor. **Who should skip it:** anyone publishing more than 5 SEO articles a month (the boosted-article cap will bite immediately — see the cost math below), and anyone who needs the full Semrush SEO suite, which is sold separately and is not included in the Content Toolkit. The Content Toolkit has no free tier, and no monthly-billing price is published — check the official site for current monthly pricing.
 
@@ -99,13 +106,29 @@ Every article starts with a brief, and the brief is where most SEO content goes 
 
 The workflow's cost is dominated by the boosted-article cap, not by the subscription prices. Here is what a month looks like at each publishing volume:
 
-| Articles/month | Semrush Content Toolkit         | Grammarly Pro (1 member, annual) | Total/mo |
-| -------------- | ------------------------------- | -------------------------------- | -------- |
-| 4              | $60 (4 of 5 boosts used)        | $12                              | $72      |
-| 5              | $60 (all 5 boosts used)         | $12                              | $72      |
-| 8              | $60 + $30 for +10 boosts = $90  | $12                              | $102     |
-| 10             | $60 + $30 for +10 boosts = $90  | $12                              | $102     |
-| 15             | $60 + $60 for +20 boosts = $120 | $12                              | $132     |
+### Semrush Content Toolkit
+
+- **4 articles/month**: $60 (4 of 5 boosts used)
+- **5 articles/month**: $60 (all 5 boosts used)
+- **8 articles/month**: $60 + $30 for +10 boosts = $90
+- **10 articles/month**: $60 + $30 for +10 boosts = $90
+- **15 articles/month**: $60 + $60 for +20 boosts = $120
+
+### Grammarly Pro (1 member, annual)
+
+- **4 articles/month**: $12
+- **5 articles/month**: $12
+- **8 articles/month**: $12
+- **10 articles/month**: $12
+- **15 articles/month**: $12
+
+### Total/mo
+
+- **4 articles/month**: $72
+- **5 articles/month**: $72
+- **8 articles/month**: $102
+- **10 articles/month**: $102
+- **15 articles/month**: $132
 
 A few things to notice. First, the cost per article falls fast between 5 and 10 articles a month, because the $30 add-on buys 10 extra boosts — at 10 articles a month, the toolkit costs $9 per article. Second, Grammarly's cost is nearly flat: 2,000 AI prompts a month is far more than one editor needs for 10 articles, so adding articles does not add Grammarly cost until you add team members. Third, the expensive mistake is publishing 6 or 7 articles a month and buying a 10-boost add-on to cover the extra one or two — either publish 5 and stay inside the base plan, or commit to 10 and use the boosts. The in-between volumes waste money.
 

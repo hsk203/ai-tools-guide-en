@@ -13,13 +13,21 @@ draft: false
 
 ## Verdict & Pricing Snapshot
 
-|                     | Semrush Content Toolkit                                         | Jasper Pro                                             |
-| ------------------- | --------------------------------------------------------------- | ------------------------------------------------------ |
-| **Starting price**  | $60/mo on annual billing; no monthly-billing price published    | $69/seat/mo monthly; $59/seat/mo annual ($708/seat/yr) |
-| **Free tier**       | None                                                            | None                                                   |
-| **Free trial**      | 7 days                                                          | 7 days                                                 |
-| **Core limit**      | 5 SEO-boosted articles/mo; unlimited standard AI articles       | 2 Brand Voices, 5 Knowledge assets, 3 Audiences        |
-| **Who should skip** | Anyone who wants a standalone writer with no SEO suite attached | Anyone whose main bottleneck is ranking, not writing   |
+### Semrush Content Toolkit
+
+- **Starting price**: $60/mo on annual billing; no monthly-billing price published
+- **Free tier**: None
+- **Free trial**: 7 days
+- **Core limit**: 5 SEO-boosted articles/mo; unlimited standard AI articles
+- **Who should skip**: Anyone who wants a standalone writer with no SEO suite attached
+
+### Jasper Pro
+
+- **Starting price**: $69/seat/mo monthly; $59/seat/mo annual ($708/seat/yr)
+- **Free tier**: None
+- **Free trial**: 7 days
+- **Core limit**: 2 Brand Voices, 5 Knowledge assets, 3 Audiences
+- **Who should skip**: Anyone whose main bottleneck is ranking, not writing
 
 **The short answer:** for an SEO blog workflow — research a topic, build a brief, draft against competitors, optimize, publish — Semrush Content Toolkit is the better fit, because that workflow is what it is built for. Jasper is the better writer for on-brand marketing copy, but it has no built-in SEO tool, so a Jasper-only blog workflow still needs a separate SEO subscription. The catch is the real cost: the Content Toolkit is not included in any Semrush SEO plan, so the minimum realistic stack is an SEO plan plus $60 a month for the toolkit. Check Semrush's official pricing for the full suite — Semrush restructured its main plans in 2026 and no longer lists the old plan names, so do not rely on a third-party price you saw quoted elsewhere.
 
@@ -37,11 +45,23 @@ That is the core difference. Semrush Content Toolkit answers "what should we wri
 
 ### Semrush Content Toolkit
 
-| Plan / add-on                        | Monthly                            | Annual (per month) | Key limits                                                                                                                               |
-| ------------------------------------ | ---------------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Content Toolkit (standalone)         | No monthly-billing price published | $60/mo             | Unlimited standard AI articles; 5 SEO-boosted articles/mo; topic ideas, SEO briefs, Content Optimizer, brand voice, WordPress publishing |
-| Add-on: +10 SEO-boosted articles     | $30/mo                             | $30/mo             | +10 SEO-boosted articles/mo                                                                                                              |
-| Add-on: extra user (Content Toolkit) | $20/user/mo                        | $20/user/mo        | Per additional seat on the toolkit                                                                                                       |
+#### Content Toolkit (standalone)
+
+- **Monthly**: No monthly-billing price published
+- **Annual (per month)**: $60/mo
+- **Key limits**: Unlimited standard AI articles; 5 SEO-boosted articles/mo; topic ideas, SEO briefs, Content Optimizer, brand voice, WordPress publishing
+
+#### Add-on: +10 SEO-boosted articles
+
+- **Monthly**: $30/mo
+- **Annual (per month)**: $30/mo
+- **Key limits**: +10 SEO-boosted articles/mo
+
+#### Add-on: extra user (Content Toolkit)
+
+- **Monthly**: $20/user/mo
+- **Annual (per month)**: $20/user/mo
+- **Key limits**: Per additional seat on the toolkit
 
 There is no free tier for the Content Toolkit, and the trial is 7 days. The most important pricing fact is also the easiest to miss: no monthly-billing price is published for the toolkit. Independent sources reporting on 2 November 2026 state that the pricing page lists no monthly-billing price. The $60-a-month figure is the annual-billing rate. If you want to pay month to month, check the official site at checkout — do not assume a monthly rate exists, or guess what it would be.
 
@@ -51,10 +71,17 @@ Extra users on the toolkit cost $20 a user a month. That is separate from extra 
 
 ### Jasper
 
-| Plan     | Monthly              | Annual (per month)                                 | Key limits                                                                                                                                                                                                                                         |
-| -------- | -------------------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pro      | $69/seat/mo          | $59/seat/mo ($708/seat/yr)                         | 1 seat included; Canvas; core workflow agents; 2 Brand Voices; 5 Knowledge assets; 3 Audiences; image generation/editing; browser extension                                                                                                        |
-| Business | Custom (sales quote) | Custom; 12-month minimum reported by third parties | Everything in Pro, plus unlimited Brand Voices, Knowledge assets, and Audiences; complex agents including GEO, translation, and deep research; custom-agent builder; Jasper Grid; API access; admin controls and Groups; dedicated account manager |
+#### Pro
+
+- **Monthly**: $69/seat/mo
+- **Annual (per month)**: $59/seat/mo ($708/seat/yr)
+- **Key limits**: 1 seat included; Canvas; core workflow agents; 2 Brand Voices; 5 Knowledge assets; 3 Audiences; image generation/editing; browser extension
+
+#### Business
+
+- **Monthly**: Custom (sales quote)
+- **Annual (per month)**: Custom; 12-month minimum reported by third parties
+- **Key limits**: Everything in Pro, plus unlimited Brand Voices, Knowledge assets, and Audiences; complex agents including GEO, translation, and deep research; custom-agent builder; Jasper Grid; API access; admin controls and Groups; dedicated account manager
 
 Jasper has no free tier. Pro comes with a 7-day free trial. Whether that trial requires a credit card upfront is unverified from the official pricing page — one November 2026 review states that it does and auto-converts on day 8 unless cancelled, but treat that as unconfirmed until checkout. Annual billing saves about 15 percent, from $69 to $59 a seat a month.
 
