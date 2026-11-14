@@ -7,6 +7,7 @@ category: reviews
 tags: ["Higgsfield", "AI video", "pricing", "Seedance", "Veo 3.1"]
 cover: tool
 coverImage: "/images/tools/higgsfield-katana/home.webp"
+affiliateUrl: https://higgsfield.ai?fpr=kevin-2d1751
 featured: false
 draft: false
 ---
@@ -39,7 +40,9 @@ draft: false
 
 **Who should skip:** Anyone who needs flagship models on the cheapest plan, or who expects unused credits to roll over
 
-**The short answer:** a 10-second video on Higgsfield costs anywhere from about 14 credits to about 100 credits, depending on the model — and that range is the whole pricing story. A 10-second Kling 3.0 clip at 720p burns about 14 to 15 credits. A 10-second Seedance 2.5 clip at 720p burns about 70 credits. A 10-second Veo 3.1 clip burns roughly 73 to 100 credits. So Starter's 270 credits buy about nineteen 10-second Kling 3.0 clips, or fewer than four 10-second Seedance 2.5 clips. If you do not know which model you will use, you do not know what Higgsfield costs. Check the official site before you pay — Higgsfield repriced in late October 2026, and the figures here are the November 2026 prices.
+**The short answer:** a 10-second video on Higgsfield costs anywhere from about 14 credits to about 100 credits, depending on the model — and that range is the whole pricing story. A 10-second Kling 3.0 clip at 720p burns about 14 to 15 credits. A 10-second Seedance 2.5 clip at 720p burns about 70 credits. A 10-second Veo 3.1 clip burns roughly 73 to 100 credits. So Starter's 270 credits buy about nineteen 10-second Kling 3.0 clips, or fewer than four 10-second Seedance 2.5 clips. If you do not know which model you will use, you do not know what Higgsfield costs. Check the [official site](https://higgsfield.ai?fpr=kevin-2d1751) before you pay — Higgsfield repriced in late October 2026, and the figures here are the November 2026 prices.
+
+*Disclosure: the links to Higgsfield in this article are affiliate links — if you sign up through one, we may earn a commission, and it costs you nothing extra.*
 
 ![Higgsfield homepage](/images/tools/higgsfield-katana/home.webp)
 
