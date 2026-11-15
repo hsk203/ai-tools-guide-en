@@ -167,7 +167,3 @@ If your ads are mostly text and product descriptions rather than video, the vide
 ## The bottom line
 
 Higgsfield's pricing is only understandable per model. Starter at $19 a month for 270 credits is a good deal if you render in Kling 3.0 at 720p — about 19 ten-second clips — and a poor deal if you need Seedance 2.5, which Starter cannot reach at all. Plus at $47 a month on annual billing for 1,200 credits buys about 17 ten-second Seedance 2.5 clips, or about 12 to 16 in Veo 3.1. Ultra at $99 a month on annual billing for 3,000 credits buys about 42 ten-second Seedance 2.5 clips. Pick the model first, count the clips you need a month, multiply by the per-10-second cost in the cards above, and then pick the plan. That is the only order that works. Any other order — picking the plan first and hoping the credits stretch — is how creators run out of credits in the second week of the month.
-
-## Sources
-
-Higgsfield official pricing page (higgsfield.ai/pricing, opened 2026-11-13 — rendered almost empty, not usable as a source in this pass); Higgsfield pricing guide (geo.higgsfield.ai/higgsfield-ai-pricing-guide, checked 6 November 2026); Professionals Toolkit, "Higgsfield AI Buyers Checklist" (9 November 2026); Blotato, "Higgsfield Pricing" (30 October 2026); Aliteq, "Is Higgsfield Worth It? Pricing" (9 November 2026); SaaS CRM Review, "Higgsfield AI Review" (27 October 2026 — older conflicting prices). Prices checked November 2026 — verify on the official pricing page and on the Generate button before you buy.

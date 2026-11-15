@@ -146,7 +146,3 @@ The honest synthesis is that most SEO blogs need both: competitive briefs and op
 ## The bottom line
 
 For an SEO blog workflow, Semrush Content Toolkit wins — not because it writes better, but because it covers the steps Jasper skips: topic research, SEO briefs, optimization, and publishing. Jasper wins for on-brand marketing production across channels. If your blog's job is to rank, buy the toolkit and budget the SEO plan it sits on. If your blog's job is to sound like your brand across every channel, buy Jasper and budget the SEO tool it needs beside it. Either way, count your boosted articles before you count your savings: 5 a month is the number that decides whether the $60 price is real or just the entry fee.
-
-## Sources
-
-Semrush official pricing page (semrush.com/pricing, read 2026-11-13); Semrush blog, "Best AI Content Marketing Tools" (semrush.com/blog — $60/mo, +10 boosts $30/mo, 7-day trial, no free version); Jasper official pricing page (jasper.ai/pricing, read 2026-11-13); AIO Copilot, "Top 15 Content Optimization Tools 2026" (2 November 2026); RCTRL, "Best AI Content Writers SEO" (18 October 2026); ClearPostPlugin, "Semrush Plans: Real Annual Cost Beyond Sticker Price" (October 2026). Prices checked November 2026 — verify on the official pricing pages before you buy.
