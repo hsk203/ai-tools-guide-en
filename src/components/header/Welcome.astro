@@ -14,7 +14,7 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
 
 <section
   class:list={["welcome-section", { compact }]}
-  style={`background-image: url('${welcomeConfig.bgImage}')`}
+  style={`background-image: url('${welcomeConfig.bgImage}'); --hero-position: ${welcomeConfig.imagePosition}; --hero-overlay: ${welcomeConfig.overlayOpacity};`}
   aria-label={title || welcomeConfig.title}
 >
   <div class="hero-shade"></div>
@@ -44,9 +44,9 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
 <style>
   .welcome-section {
     position: relative;
-    height: 390px;
+    height: 360px;
     background-size: cover;
-    background-position: center 47%;
+    background-position: var(--hero-position, center 47%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,9 +59,22 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
     inset: 0;
     z-index: 0;
     background:
-      radial-gradient(ellipse at 76% 26%, #16d9c34a, transparent 36%),
-      radial-gradient(ellipse at 18% 12%, #7355ff6b, transparent 42%),
-      linear-gradient(108deg, #09152cf0 0%, #17285dd9 50%, #07283bd1 100%);
+      radial-gradient(
+        ellipse at 80% 22%,
+        color-mix(in srgb, var(--accent-2) 34%, transparent),
+        transparent 38%
+      ),
+      radial-gradient(
+        ellipse at 18% 14%,
+        color-mix(in srgb, var(--accent-warm) 36%, transparent),
+        transparent 42%
+      ),
+      linear-gradient(
+        108deg,
+        rgb(23 12 29 / var(--hero-overlay, 0.42)) 0%,
+        rgb(28 16 39 / calc(var(--hero-overlay, 0.42) * 0.72)) 52%,
+        rgb(9 25 33 / calc(var(--hero-overlay, 0.42) * 0.88)) 100%
+      );
   }
   .welcome-section::after {
     content: "";
@@ -69,7 +82,7 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.2;
+    opacity: 0.14;
     background-image:
       linear-gradient(#ffffff12 1px, transparent 1px),
       linear-gradient(90deg, #ffffff12 1px, transparent 1px);
@@ -86,7 +99,7 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
     position: relative;
     z-index: 3;
     padding: 25px 20px 55px;
-    text-shadow: 0 2px 18px #1f2c6150;
+    text-shadow: 0 2px 18px rgb(17 10 28 / 48%);
   }
   .hero-eyebrow {
     display: inline-flex;
@@ -108,15 +121,15 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
     letter-spacing: 0.01em;
     font-weight: 700;
     line-height: 1.28;
-    text-shadow: 0 6px 28px #07162b9c;
+    text-shadow: 0 6px 28px rgb(17 10 28 / 64%);
   }
   .hero-sparkle {
     display: inline-block;
     font-size: 33px;
     margin-left: 12px;
     vertical-align: top;
-    color: #65ead6;
-    text-shadow: 0 0 24px #65ead680;
+    color: var(--accent-2);
+    text-shadow: 0 0 24px color-mix(in srgb, var(--accent-2) 52%, transparent);
   }
   .hero-content p {
     font-size: 15px;
@@ -134,7 +147,7 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
     font-size: 11px;
     letter-spacing: 0.05em;
     backdrop-filter: blur(12px);
-    box-shadow: 0 10px 30px #07162b36;
+    box-shadow: 0 10px 30px rgb(17 10 28 / 28%);
   }
   .hero-explore:hover {
     background: #ffffff2e;
@@ -179,8 +192,8 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
   }
   @media (max-width: 760px) {
     .welcome-section {
-      height: 340px;
-      background-position: 40% center;
+      height: 320px;
+      background-position: 58% center;
     }
     .hero-content {
       padding-top: 50px;

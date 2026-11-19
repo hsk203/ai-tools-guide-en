@@ -73,6 +73,8 @@ export const welcomeConfig = {
   title: t("hero.title"),
   subTitle: t("hero.subtitle"),
   bgImage: settings.hero.image,
+  imagePosition: settings.hero.imagePosition ?? "center 47%",
+  overlayOpacity: settings.hero.overlayOpacity ?? 0.42,
 };
 
 export const personalInfo = {
