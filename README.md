@@ -9,7 +9,7 @@ English-original guide to AI tools: comparisons, workflows, and tutorials for co
 Kanade theme: Astro 7.3.7 + Tailwind CSS 4.3.3 + Vue 3.5, static output, deployed on Cloudflare Workers (new account 517519203@qq.com).
 
 - Live site: https://aitech8.com (English at root, since 2026-11-19)
-- GitHub: https://github.com/hsk203/ai-tools-guide-en
+- GitHub: https://github.com/hsk203/aitech8
 - Language: English only (`PUBLIC_SITE_LANGUAGE=en`)
 
 ## Build & deploy
