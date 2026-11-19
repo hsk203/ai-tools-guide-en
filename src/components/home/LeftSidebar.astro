@@ -49,7 +49,10 @@ const tags = getTags(posts);
     </h2>
     <div class="tag-cloud">
       {tags.map((tag) => (
-        <a class="chip" href={withBase(`/posts/?tag=${encodeURIComponent(tag)}`)}>
+        <a
+          class="chip"
+          href={withBase(`/posts/?tag=${encodeURIComponent(tag)}`)}
+        >
           {tag}
         </a>
       ))}
@@ -104,20 +107,12 @@ const tags = getTags(posts);
     padding: 3px 8px;
   }
   .tag-cloud .chip:nth-child(3n + 2) {
-    color: #789a91;
-    background: #eff6f2;
+    color: var(--accent-2);
+    background: color-mix(in srgb, var(--accent-2) 13%, var(--card));
   }
   .tag-cloud .chip:nth-child(3n + 3) {
-    color: #9184af;
-    background: #f2eff9;
-  }
-  :global(.dark) .tag-cloud .chip:nth-child(3n + 2) {
-    color: #a9cdbd;
-    background: #2c3e39;
-  }
-  :global(.dark) .tag-cloud .chip:nth-child(3n + 3) {
-    color: #c0b1e0;
-    background: #363046;
+    color: color-mix(in srgb, var(--accent-warm) 75%, var(--text));
+    background: color-mix(in srgb, var(--accent-warm) 14%, var(--card));
   }
   .rss-card {
     display: flex;
@@ -125,6 +120,11 @@ const tags = getTags(posts);
     gap: 10px;
     padding: 18px;
     color: var(--accent);
+    background: linear-gradient(
+      130deg,
+      var(--card),
+      color-mix(in srgb, var(--accent-soft) 68%, var(--card))
+    );
   }
   .rss-card > span:first-child {
     font-size: 22px;

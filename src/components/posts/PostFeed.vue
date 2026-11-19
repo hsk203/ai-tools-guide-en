@@ -126,22 +126,22 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
     </div>
     <div class="feed-tabs card" :aria-label="t('sidebar.categories')">
       <div class="feed-tabs-scroll">
-      <button
-        :class="{ selected: !category && !tag && !month }"
-        :aria-pressed="!category && !tag && !month"
-        @click="reset"
-      >
-        {{ t("post.all") }}<span>{{ posts.length }}</span>
-      </button>
-      <button
-        v-for="name in categoryNames"
-        :key="name"
-        :class="{ selected: category === name }"
-        :aria-pressed="category === name"
-        @click="setCategory(name)"
-      >
-        {{ categoryLabel(name) }}
-      </button>
+        <button
+          :class="{ selected: !category && !tag && !month }"
+          :aria-pressed="!category && !tag && !month"
+          @click="reset"
+        >
+          {{ t("post.all") }}<span>{{ posts.length }}</span>
+        </button>
+        <button
+          v-for="name in categoryNames"
+          :key="name"
+          :class="{ selected: category === name }"
+          :aria-pressed="category === name"
+          @click="setCategory(name)"
+        >
+          {{ categoryLabel(name) }}
+        </button>
       </div>
     </div>
     <div
@@ -177,7 +177,11 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
               ><span class="icon-[lucide--pin]"></span
               >{{ t("post.featured") }}</span
             ><a
-              :href="withBase(`/posts/?category=${encodeURIComponent(post.category)}`)"
+              :href="
+                withBase(
+                  `/posts/?category=${encodeURIComponent(post.category)}`,
+                )
+              "
               >{{ categoryLabel(post.category) }}</a
             ><span class="meta-divider">/</span
             ><time :datetime="post.date">{{ formatDate(post.date) }}</time>
@@ -512,6 +516,90 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
   border: 0;
   background: none;
   color: var(--muted);
+}
+.feed-title {
+  margin-bottom: 19px;
+  height: auto;
+  min-height: 30px;
+}
+.feed-title h2 {
+  letter-spacing: -0.02em;
+}
+.feed-title h2 > span {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+}
+.feed-tabs {
+  padding: 8px;
+  border-radius: 15px;
+  background: color-mix(in srgb, var(--card) 92%, var(--accent-soft));
+}
+.feed-tabs button.selected {
+  background: var(--accent-gradient);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 24%, transparent);
+}
+.post-card {
+  border-color: color-mix(in srgb, var(--accent) 9%, var(--line));
+  border-radius: 20px;
+  background: linear-gradient(
+    115deg,
+    color-mix(in srgb, var(--card) 96%, var(--accent-soft)),
+    var(--card) 58%
+  );
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--text) 5%, transparent);
+}
+.post-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
+  box-shadow: 0 18px 38px color-mix(in srgb, var(--accent) 13%, transparent);
+}
+.cover-link {
+  margin: 10px 0 10px 10px;
+  border-radius: 14px;
+}
+.post-info h3 {
+  font-size: 18px;
+  letter-spacing: -0.015em;
+  line-height: 1.55;
+}
+.post-kicker a {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.pin {
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent-warm) 18%, var(--card));
+  color: color-mix(in srgb, var(--accent-warm) 74%, var(--text));
+}
+.read-post {
+  color: var(--accent);
+  font-weight: 600;
+}
+.read-post > span {
+  background: var(--accent-soft);
+  transition: transform 0.2s;
+}
+.read-post:hover > span {
+  transform: translate(2px, -2px);
+}
+.pagination button.current {
+  background: var(--accent-gradient);
+  border-color: transparent;
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+.archive-intro {
+  border-top: 3px solid var(--accent);
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    var(--card),
+    color-mix(in srgb, var(--accent-soft) 55%, var(--card))
+  );
 }
 @media (max-width: 760px) {
   .feed-title small {

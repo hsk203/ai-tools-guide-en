@@ -44,9 +44,9 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
 <style>
   .welcome-section {
     position: relative;
-    height: 360px;
+    height: 390px;
     background-size: cover;
-    background-position: center 43%;
+    background-position: center 47%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,56 +57,88 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
   .hero-shade {
     position: absolute;
     inset: 0;
-    background: linear-gradient(100deg, #1e3a8a30, #1e40af1e 50%, #0c4a6e40);
+    z-index: 0;
+    background:
+      radial-gradient(ellipse at 76% 26%, #16d9c34a, transparent 36%),
+      radial-gradient(ellipse at 18% 12%, #7355ff6b, transparent 42%),
+      linear-gradient(108deg, #09152cf0 0%, #17285dd9 50%, #07283bd1 100%);
+  }
+  .welcome-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.2;
+    background-image:
+      linear-gradient(#ffffff12 1px, transparent 1px),
+      linear-gradient(90deg, #ffffff12 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      black 46%,
+      black 82%,
+      transparent
+    );
   }
   .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     padding: 25px 20px 55px;
     text-shadow: 0 2px 18px #1f2c6150;
   }
   .hero-eyebrow {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 13px;
+    border: 1px solid #ffffff3b;
+    border-radius: 999px;
+    background: #ffffff12;
+    backdrop-filter: blur(10px);
     font-family: "Oxanium-Medium", var(--font-body);
     font-size: 11px;
     letter-spacing: 0.28em;
-    opacity: 0.92;
-    margin-bottom: 19px;
+    opacity: 0.98;
+    margin-bottom: 18px;
   }
   .hero-content .hero-title {
     margin: 0 0 10px;
     font-size: clamp(30px, 3.5vw, 46px);
-    letter-spacing: 0.06em;
-    font-weight: 600;
-    line-height: 1.5;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+    line-height: 1.28;
+    text-shadow: 0 6px 28px #07162b9c;
   }
   .hero-sparkle {
     display: inline-block;
     font-size: 33px;
     margin-left: 12px;
     vertical-align: top;
-    color: #67e8f9;
+    color: #65ead6;
+    text-shadow: 0 0 24px #65ead680;
   }
   .hero-content p {
     font-size: 15px;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.08em;
     margin: 8px 0 23px;
   }
   .hero-explore {
     display: inline-flex;
     align-items: center;
     gap: 14px;
-    border: 1px solid #ffffff65;
-    background: #ffffff12;
+    border: 1px solid #ffffff75;
+    background: #ffffff18;
     padding: 8px 18px;
     border-radius: 30px;
     font-size: 11px;
     letter-spacing: 0.05em;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px #07162b36;
   }
   .hero-explore:hover {
-    background: #ffffff30;
-    transform: translateY(2px);
+    background: #ffffff2e;
+    transform: translateY(-2px);
   }
   .hero-side-note {
     position: absolute;
@@ -123,14 +155,14 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
     bottom: -2px;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
   }
   .hero-waves svg {
     height: 70px;
     min-height: 70px;
   }
   .welcome-section.compact {
-    height: 240px;
+    height: 250px;
   }
   .compact .hero-content {
     padding-top: 72px;
@@ -147,7 +179,7 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
   }
   @media (max-width: 760px) {
     .welcome-section {
-      height: 320px;
+      height: 340px;
       background-position: 40% center;
     }
     .hero-content {
@@ -158,7 +190,8 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
       letter-spacing: 0.06em;
     }
     .hero-content .hero-title {
-      font-size: 30px;
+      font-size: 29px;
+      line-height: 1.35;
     }
     .hero-sparkle {
       font-size: 24px;
@@ -168,7 +201,7 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
       display: none;
     }
     .welcome-section.compact {
-      height: 220px;
+      height: 228px;
     }
     .compact .hero-content .hero-title {
       font-size: 28px;

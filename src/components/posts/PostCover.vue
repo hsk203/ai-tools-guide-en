@@ -92,8 +92,8 @@ const labels: Record<string, { icon: string; title: string; sub: string }> = {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #79539c;
-  background: #eee6f7;
+  color: #394fc4;
+  background: linear-gradient(145deg, #e8ebff, #dce4ff);
   padding: 28px 12px;
   isolation: isolate;
 }
@@ -179,36 +179,37 @@ small {
   opacity: 0.5;
 }
 .css {
-  background: #e0e7ff;
-  color: #4f46e5;
+  background: linear-gradient(145deg, #e4e8ff, #d6dcff);
+  color: #4558df;
 }
 .vue,
 .life {
-  background: #e2efe7;
-  color: #588f7a;
+  background: linear-gradient(145deg, #dff5ec, #ccefe4);
+  color: #178b70;
 }
 .notes {
-  background: #cffafe;
-  color: #0891b2;
+  background: linear-gradient(145deg, #d4f8f4, #b9eee7);
+  color: #087f83;
 }
 .typescript {
-  background: #dfebf7;
-  color: #648db2;
+  background: linear-gradient(145deg, #e0efff, #cfe1fa);
+  color: #2866a5;
 }
 .git {
-  background: #e0e7ff;
-  color: #4f46e5;
+  background: linear-gradient(145deg, #e4e8ff, #d6dcff);
+  color: #4558df;
 }
 .design {
-  background: #e5e6fa;
-  color: #8283b5;
+  background: linear-gradient(145deg, #f2e7ff, #e6dcff);
+  color: #8150c4;
 }
 .tool {
-  background: #e8eefc;
-  color: #4a6fa5;
+  background: linear-gradient(145deg, #e2f0ff, #d1e8fa);
+  color: #3065a5;
 }
 .featured {
-  background: #e9e1f4;
+  background: linear-gradient(140deg, #515fe9, #8956e8 58%, #11a99c);
+  color: #fff;
 }
 :global(.dark .post-cover) {
   filter: brightness(0.75) saturate(0.8);

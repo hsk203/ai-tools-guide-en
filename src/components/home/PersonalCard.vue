@@ -65,8 +65,13 @@ const props = defineProps<{ posts: PostSummary[] }>();
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background: linear-gradient(115deg, var(--accent-soft), var(--card));
+  background: linear-gradient(
+    115deg,
+    color-mix(in srgb, var(--accent) 14%, var(--card)),
+    color-mix(in srgb, var(--accent-2) 10%, var(--card))
+  );
   color: var(--accent);
+  border-bottom: 1px solid var(--line);
 }
 .profile-top .eyebrow {
   font-size: 8px;
@@ -91,7 +96,7 @@ const props = defineProps<{ posts: PostSummary[] }>();
   height: 83px;
   border-radius: 26px;
   border: 4px solid var(--card);
-  box-shadow: 0 3px 10px #4f46e518;
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--accent) 20%, transparent);
   object-fit: cover;
   transition: transform 0.3s;
 }
@@ -111,8 +116,8 @@ const props = defineProps<{ posts: PostSummary[] }>();
 h2 {
   margin: 7px 0 1px;
   font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 .profile-role {
   margin: 0;
@@ -143,6 +148,7 @@ h2 {
   font:
     19px "Oxanium-Medium",
     var(--font-body);
+  color: var(--accent);
 }
 .profile-stats span {
   color: var(--muted);
@@ -170,8 +176,8 @@ h2 {
 }
 .profile-status {
   border-radius: 8px;
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: color-mix(in srgb, var(--accent-2) 12%, var(--card));
+  color: var(--accent-2);
   font-size: 9px;
   padding: 7px 4px;
   display: flex;

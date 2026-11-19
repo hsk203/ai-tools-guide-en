@@ -13,9 +13,7 @@ const menuOpen = ref(false);
 const navDropOpen = ref<string | null>(null);
 const homeUrl = withBase("/");
 const active = (url: string) =>
-  url === homeUrl
-    ? props.pathname === homeUrl
-    : props.pathname.startsWith(url);
+  url === homeUrl ? props.pathname === homeUrl : props.pathname.startsWith(url);
 const handleScroll = () => {
   isAtTop.value = window.scrollY < 48;
 };
@@ -92,7 +90,11 @@ onUnmounted(() => {
                 aria-hidden="true"
               ></span>
             </a>
-            <div v-show="navDropOpen === item.url" class="nav-dropdown" role="menu">
+            <div
+              v-show="navDropOpen === item.url"
+              class="nav-dropdown"
+              role="menu"
+            >
               <a
                 v-for="child in item.children"
                 :key="child.url"
@@ -427,5 +429,36 @@ nav a.active::after {
   nav a {
     font-size: 14px;
   }
+}
+
+.brand-flower {
+  color: #65ead6;
+  filter: drop-shadow(0 0 11px #65ead65c);
+}
+.nav-header:not(.scrolled) .brand-dot {
+  color: #65ead6;
+}
+.nav-header.scrolled,
+.nav-header.menu-open {
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  box-shadow: 0 10px 32px color-mix(in srgb, #10244a 12%, transparent);
+}
+.scrolled .brand-flower,
+.scrolled nav a.active,
+.menu-open nav a.active {
+  color: var(--accent);
+}
+.nav-actions button:hover {
+  color: var(--accent-2);
+}
+nav a.active::after {
+  height: 3px;
+  width: 24px;
+  left: calc(50% - 12px);
+  background: var(--accent-gradient);
+}
+.nav-dropdown a:hover,
+.lang-dropdown a:hover {
+  color: var(--accent);
 }
 </style>

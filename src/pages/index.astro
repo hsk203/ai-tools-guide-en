@@ -25,7 +25,10 @@ const counts = new Map(
     </div>
     <div class="category-grid">
       {categoryNames.map((c) => (
-        <a class="category-card" href={withBase(`/?category=${encodeURIComponent(c)}`)}>
+        <a
+          class="category-card"
+          href={withBase(`/?category=${encodeURIComponent(c)}`)}
+        >
           <strong>{categoryLabel(c)}</strong>
           <span>{t("post.records", { count: counts.get(c) ?? 0 })}</span>
         </a>
@@ -34,27 +37,37 @@ const counts = new Map(
   </section>
   <PostFeed posts={posts} client:load />
   <PostListFallback posts={posts} />
-  <p class="impact-verification" aria-hidden="true">Impact-Site-Verification: debcc67c-f25b-4c06-930a-8f3ea9e19919</p>
-  <p class="impact-verification" aria-hidden="true">Impact-Site-Verification: 5ca0ccb5-e829-4b08-8ace-8b736ae24b3d</p>
+  <p class="impact-verification" aria-hidden="true">
+    Impact-Site-Verification: debcc67c-f25b-4c06-930a-8f3ea9e19919
+  </p>
+  <p class="impact-verification" aria-hidden="true">
+    Impact-Site-Verification: 5ca0ccb5-e829-4b08-8ace-8b736ae24b3d
+  </p>
 </BlogLayout>
 <style>
   .hello-strip {
     display: flex;
     align-items: center;
     gap: 9px;
-    color: var(--accent);
+    color: var(--text);
     font-size: 12px;
     font-weight: 600;
     margin: 0 0 21px;
-    padding: 12px 16px;
-    border: 1px solid #c7d2fe;
+    padding: 13px 17px;
+    border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--line));
     border-left: 4px solid var(--accent);
-    border-radius: 12px;
-    background: linear-gradient(90deg, #eef2ff 0%, #ecfeff 100%);
+    border-radius: 14px;
+    background: linear-gradient(
+      100deg,
+      color-mix(in srgb, var(--accent-soft) 82%, var(--card)),
+      color-mix(in srgb, var(--accent-2) 10%, var(--card))
+    );
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 7%, transparent);
   }
   .hello-strip > span:first-child {
     font-size: 17px;
     flex-shrink: 0;
+    color: var(--accent);
   }
   .hello-strip p {
     margin: 0;
@@ -62,63 +75,133 @@ const counts = new Map(
   }
   .hello-pill {
     font:
-      7px "Oxanium-Medium",
+      9px "Oxanium-Medium",
       var(--font-body);
-    letter-spacing: 0.05em;
-    opacity: 0.65;
+    letter-spacing: 0.12em;
+    color: var(--accent-2);
   }
   .tool-categories {
     margin: 0 0 26px;
   }
   .categories-head h2 {
-    font-size: 17px;
+    font-size: 19px;
+    letter-spacing: -0.02em;
     margin: 0 0 4px;
   }
   .categories-head p {
     font-size: 12px;
     color: var(--muted);
-    margin: 0 0 14px;
+    margin: 0 0 16px;
   }
   .category-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 10px;
+    gap: 12px;
   }
   .category-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 4px;
-    padding: 16px;
-    border: 1px solid var(--line);
-    border-top: 3px solid var(--accent);
-    border-radius: 12px;
-    background: var(--card);
-    box-shadow: var(--shadow);
+    padding: 17px 18px;
+    border: 1px solid color-mix(in srgb, var(--category-color) 22%, var(--line));
+    border-top: 3px solid var(--category-color);
+    border-radius: 16px;
+    background: linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--category-wash) 68%, var(--card)),
+      var(--card) 76%
+    );
+    box-shadow: 0 10px 28px
+      color-mix(in srgb, var(--category-color) 8%, transparent);
     color: var(--text);
     text-decoration: none;
     transition:
       transform 0.2s,
       box-shadow 0.2s,
-      border-color 0.2s;
+      border-color 0.2s,
+      background 0.2s;
+  }
+  .category-card:nth-child(4n + 1) {
+    --category-color: #4f5ff4;
+    --category-wash: #dfe4ff;
+  }
+  .category-card:nth-child(4n + 2) {
+    --category-color: #08a89d;
+    --category-wash: #d8f5ef;
+  }
+  .category-card:nth-child(4n + 3) {
+    --category-color: #eb7c63;
+    --category-wash: #ffebe4;
+  }
+  .category-card:nth-child(4n + 4) {
+    --category-color: #945be5;
+    --category-wash: #f0e5ff;
+  }
+  .category-card::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 86px;
+    height: 86px;
+    right: -35px;
+    top: -47px;
+    border: 1px solid color-mix(in srgb, var(--category-color) 18%, transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 13px
+      color-mix(in srgb, var(--category-color) 5%, transparent);
+    transition: transform 0.25s;
   }
   .category-card:hover {
-    border-color: var(--accent);
-    border-top-color: var(--accent-2);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px #4f46e522;
+    border-color: color-mix(in srgb, var(--category-color) 60%, var(--line));
+    border-top-color: var(--category-color);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px
+      color-mix(in srgb, var(--category-color) 18%, transparent);
+  }
+  .category-card:hover::after {
+    transform: scale(1.12);
   }
   .category-card strong {
-    font-size: 14px;
+    color: var(--category-color);
+    font-size: 15px;
     font-weight: 600;
   }
   .category-card span {
     font-size: 11px;
     color: var(--muted);
   }
+  :global(.dark) .category-card:nth-child(4n + 1) {
+    --category-wash: #29345e;
+  }
+  :global(.dark) .category-card:nth-child(4n + 2) {
+    --category-wash: #183f43;
+  }
+  :global(.dark) .category-card:nth-child(4n + 3) {
+    --category-wash: #4a302f;
+  }
+  :global(.dark) .category-card:nth-child(4n + 4) {
+    --category-wash: #382c51;
+    --category-color: #c39cff;
+  }
+  :global(.dark) .category-card:nth-child(4n + 1) {
+    --category-color: #aab3ff;
+  }
+  :global(.dark) .category-card:nth-child(4n + 2) {
+    --category-color: #69e4d4;
+  }
+  :global(.dark) .category-card:nth-child(4n + 3) {
+    --category-color: #ffad8e;
+  }
   @media (max-width: 760px) {
     .hello-strip {
       font-size: 10px;
       margin-bottom: 22px;
+    }
+    .category-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .hello-pill {
       display: none;
