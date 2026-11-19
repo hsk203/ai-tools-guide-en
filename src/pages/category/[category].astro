@@ -1,0 +1,27 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import PostFeed from "../../components/posts/PostFeed.vue";
+import PostListFallback from "../../components/posts/PostListFallback.astro";
+import { getPosts, summarize, categories } from "../../lib/posts";
+import { categoryLabel } from "../../data/post-options";
+import { t } from "../../i18n";
+
+export async function getStaticPaths() {
+  return categories.map((category) => ({ params: { category } }));
+}
+
+const { category } = Astro.params;
+const posts = (await getPosts())
+  .filter((post) => post.data.category === category)
+  .map(summarize);
+const label = categoryLabel(category ?? "");
+---
+
+<BlogLayout
+  title={label}
+  heroTitle={label}
+  heroSubtitle={t("post.heroSubtitle")}
+>
+  <PostFeed posts={posts} archive client:load />
+  <PostListFallback posts={posts} />
+</BlogLayout>

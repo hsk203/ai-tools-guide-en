@@ -8,6 +8,7 @@ import {
   categoryLabel,
   normalizeCategory,
 } from "../../data/post-options";
+import { withBase } from "../../lib/url";
 const props = defineProps<{ posts: PostSummary[]; archive?: boolean }>();
 const category = ref("");
 const tag = ref("");
@@ -124,6 +125,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
       }}</span>
     </div>
     <div class="feed-tabs card" :aria-label="t('sidebar.categories')">
+      <div class="feed-tabs-scroll">
       <button
         :class="{ selected: !category && !tag && !month }"
         :aria-pressed="!category && !tag && !month"
@@ -140,6 +142,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
       >
         {{ categoryLabel(name) }}
       </button>
+      </div>
     </div>
     <div
       v-if="tag || month || (category && !categoryNames.includes(category))"
@@ -158,7 +161,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
         :data-category="post.category"
       >
         <a
-          :href="`/posts/${post.id}/`"
+          :href="withBase(`/posts/${post.id}/`)"
           class="cover-link"
           :aria-label="t('post.read', { title: post.title })"
           tabindex="-1"
@@ -174,27 +177,19 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
               ><span class="icon-[lucide--pin]"></span
               >{{ t("post.featured") }}</span
             ><a
-              :href="`/posts/?category=${encodeURIComponent(post.category)}`"
+              :href="withBase(`/posts/?category=${encodeURIComponent(post.category)}`)"
               >{{ categoryLabel(post.category) }}</a
             ><span class="meta-divider">/</span
             ><time :datetime="post.date">{{ formatDate(post.date) }}</time>
           </div>
           <h3>
-            <a :href="`/posts/${post.id}/`">{{ post.title }}</a>
+            <a :href="withBase(`/posts/${post.id}/`)">{{ post.title }}</a>
           </h3>
           <p class="post-description">{{ post.description }}</p>
           <div class="post-bottom">
-            <div class="post-tags">
-              <a
-                v-for="item in post.tags.slice(0, 2)"
-                :key="item"
-                :href="`/posts/?tag=${encodeURIComponent(item)}`"
-                ># {{ item }}</a
-              >
-            </div>
             <a
               class="read-post"
-              :href="`/posts/${post.id}/`"
+              :href="withBase(`/posts/${post.id}/`)"
               :aria-label="t('post.readFull', { title: post.title })"
               >{{ t("post.minutes", { count: post.minutes })
               }}<span class="icon-[lucide--arrow-up-right]"></span
@@ -280,17 +275,14 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
   color: var(--muted);
 }
 .feed-tabs {
-  display: flex;
-  gap: 6px;
-  align-items: center;
   padding: 9px 10px;
   margin-bottom: 18px;
   border-radius: 13px;
-  overflow-x: auto;
-  scrollbar-width: none;
 }
-.feed-tabs::-webkit-scrollbar {
-  display: none;
+.feed-tabs-scroll {
+  display: flex;
+  gap: 6px;
+  align-items: center;
 }
 .feed-tabs button {
   padding: 7px 13px;
@@ -335,7 +327,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
 }
 .post-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px #98566a10;
+  box-shadow: 0 8px 25px #4f46e518;
 }
 .cover-link {
   display: block;
@@ -383,6 +375,10 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
   line-height: 1.65;
   font-weight: 600;
   margin: 8px 0 7px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .post-info h3 a:hover {
   color: var(--accent);
@@ -400,7 +396,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
 .post-bottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: auto;
   gap: 8px;
   font-size: 10px;
@@ -468,7 +464,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
 .feed-end > span {
   width: 28px;
   height: 1px;
-  background: #e6c8d2;
+  background: #c7d2fe;
 }
 .archive-intro {
   padding: 25px;
@@ -522,28 +518,49 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
     display: none;
   }
   .feed-tabs {
-    justify-content: flex-start;
-    gap: 1px;
     padding: 8px;
+    overflow: hidden;
   }
-  .feed-tabs button {
+  .feed-tabs-scroll {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    mask-image: linear-gradient(to right, black 82%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 82%, transparent 100%);
+  }
+  .feed-tabs-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .feed-tabs-scroll button {
+    flex-shrink: 0;
     padding: 7px 9px;
     font-size: 11px;
   }
   .post-card {
-    grid-template-columns: 29% minmax(0, 1fr);
-    min-height: 185px;
+    grid-template-columns: 132px minmax(0, 1fr);
+    min-height: 0;
+  }
+  .cover-link {
+    align-self: center;
+  }
+  .cover-link :deep(.post-cover) {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    min-height: 0;
+  }
+  .cover-link :deep(.cover-image) {
+    min-height: 0;
   }
   .post-info {
-    padding: 14px 13px;
+    padding: 12px 12px;
   }
   .post-info h3 {
     font-size: 15px;
-    margin: 6px 0;
+    margin: 5px 0 6px;
   }
   .post-description {
     font-size: 11px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   .post-kicker {
     font-size: 9px;
@@ -576,9 +593,11 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
   }
   .cover-link {
     margin: 8px 8px 0;
+    align-self: stretch;
   }
   .cover-link :deep(.post-cover) {
-    min-height: 135px;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
   }
 }
 </style>

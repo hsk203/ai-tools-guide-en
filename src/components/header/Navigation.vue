@@ -2,16 +2,20 @@
 import { t } from "../../i18n";
 import { ref, onMounted, onUnmounted } from "vue";
 import { headerConfig } from "../../config";
+import { withBase } from "../../lib/url";
 import { initTheme, toggleTheme } from "../../scripts/theme";
 const props = defineProps<{
   pathname: string;
-  alternate?: { url: string; label: string };
 }>();
 const isDark = ref(false);
 const isAtTop = ref(true);
 const menuOpen = ref(false);
+const navDropOpen = ref<string | null>(null);
+const homeUrl = withBase("/");
 const active = (url: string) =>
-  url === "/" ? props.pathname === "/" : props.pathname.startsWith(url);
+  url === homeUrl
+    ? props.pathname === homeUrl
+    : props.pathname.startsWith(url);
 const handleScroll = () => {
   isAtTop.value = window.scrollY < 48;
 };
@@ -23,7 +27,13 @@ const openSearch = () => {
   window.dispatchEvent(new Event("kanade:search"));
 };
 const handleKey = (event: KeyboardEvent) => {
-  if (event.key === "Escape") menuOpen.value = false;
+  if (event.key === "Escape") {
+    menuOpen.value = false;
+    navDropOpen.value = null;
+  }
+};
+const toggleNavDrop = (url: string) => {
+  navDropOpen.value = navDropOpen.value === url ? null : url;
 };
 onMounted(() => {
   isDark.value = initTheme() === "dark";
@@ -44,7 +54,7 @@ onUnmounted(() => {
   >
     <div class="nav-inner shell">
       <a
-        href="/"
+        :href="homeUrl"
         class="brand"
         :aria-label="t('nav.brandHome', { site: headerConfig.title })"
         ><span class="brand-flower">✿</span>{{ headerConfig.title
@@ -55,21 +65,59 @@ onUnmounted(() => {
         :class="{ expanded: menuOpen }"
         id="main-navigation"
       >
-        <a
-          v-for="item in headerConfig.navLinks"
-          :key="item.url"
-          :href="item.url"
-          :aria-current="active(item.url) ? 'page' : undefined"
-          :class="{ active: active(item.url) }"
-        >
-          <span :class="item.icon" aria-hidden="true"></span
-          ><span>{{ item.name }}</span>
-        </a>
+        <template v-for="item in headerConfig.navLinks" :key="item.url">
+          <div
+            v-if="item.children?.length"
+            class="nav-drop"
+            @mouseenter="navDropOpen = item.url"
+            @mouseleave="navDropOpen = null"
+          >
+            <a
+              :href="item.url"
+              :aria-current="active(item.url) ? 'page' : undefined"
+              :class="{ active: active(item.url) }"
+              :aria-expanded="navDropOpen === item.url"
+              aria-haspopup="true"
+              @click.prevent="toggleNavDrop(item.url)"
+            >
+              <span :class="item.icon" aria-hidden="true"></span
+              ><span>{{ item.name }}</span>
+              <span
+                :class="
+                  navDropOpen === item.url
+                    ? 'icon-[lucide--chevron-up]'
+                    : 'icon-[lucide--chevron-down]'
+                "
+                class="drop-caret"
+                aria-hidden="true"
+              ></span>
+            </a>
+            <div v-show="navDropOpen === item.url" class="nav-dropdown" role="menu">
+              <a
+                v-for="child in item.children"
+                :key="child.url"
+                :href="child.url"
+                role="menuitem"
+                :aria-current="active(child.url) ? 'page' : undefined"
+                :class="{ active: active(child.url) }"
+              >
+                <span :class="child.icon" aria-hidden="true"></span
+                ><span>{{ child.name }}</span>
+              </a>
+            </div>
+          </div>
+          <a
+            v-else
+            :href="item.url"
+            :aria-current="active(item.url) ? 'page' : undefined"
+            :class="{ active: active(item.url) }"
+          >
+            <span :class="item.icon" aria-hidden="true"></span
+            ><span>{{ item.name }}</span>
+          </a>
+        </template>
       </nav>
       <div class="nav-actions">
-        <a v-if="alternate" :href="alternate.url" class="lang-switch">{{
-          alternate.label
-        }}</a>
         <button
           @click="openSearch"
           :aria-label="t('nav.search')"
@@ -137,7 +185,7 @@ onUnmounted(() => {
   font-weight: 400;
 }
 .brand-dot {
-  color: #ffb4ca;
+  color: #818cf8;
   margin-left: -7px;
 }
 nav {
@@ -167,6 +215,52 @@ nav a.active::after {
   border-radius: 2px;
   background: currentColor;
   left: calc(50% - 9px);
+}
+.nav-drop {
+  position: relative;
+  display: flex;
+}
+.nav-drop .drop-caret {
+  font-size: 13px;
+  margin-left: 2px;
+}
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+}
+.nav-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+  opacity: 1;
+}
+.nav-dropdown a:hover {
+  background: var(--accent-soft);
+}
+.nav-dropdown a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+.nav-dropdown a.active::after {
+  display: none;
 }
 .nav-actions {
   display: flex;
@@ -201,6 +295,60 @@ nav a.active::after {
 }
 .lang-switch:hover {
   background: #ffffff25;
+}
+.lang-menu {
+  position: relative;
+}
+.lang-menu .lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: auto;
+  height: 35px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.lang-menu .lang-switch:hover {
+  transform: none;
+}
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 150px;
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+.lang-dropdown a {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.lang-dropdown a:hover {
+  background: var(--accent-soft);
+}
+.lang-dropdown a.current {
+  color: var(--accent);
+  font-weight: 600;
 }
 .nav-header.scrolled,
 .nav-header.menu-open {
@@ -255,6 +403,21 @@ nav a.active::after {
   }
   nav a.active::after {
     display: none;
+  }
+  .nav-drop {
+    flex-direction: column;
+  }
+  .nav-dropdown {
+    position: static;
+    transform: none;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    padding: 2px 0 2px 20px;
+    min-width: 0;
+  }
+  .nav-dropdown a {
+    padding: 9px 14px;
   }
 }
 @media (min-width: 760px) and (max-width: 990px) {

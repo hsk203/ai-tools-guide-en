@@ -159,8 +159,8 @@ onUnmounted(() => {
   pointer-events: auto;
 
   /* Light theme */
-  background: linear-gradient(135deg, #ff9ec8 0%, #ffb8d9 50%, #ffc9e5 100%);
-  box-shadow: 0 2px 6px rgba(255, 158, 200, 0.5);
+  background: linear-gradient(135deg, #818cf8 0%, #a5b4fc 50%, #c7d2fe 100%);
+  box-shadow: 0 2px 6px rgba(129, 140, 248, 0.5);
 }
 
 .custom-scrollbar-thumb.is-visible {
@@ -172,8 +172,8 @@ onUnmounted(() => {
 .custom-scrollbar-thumb.is-dragging {
   width: 10px;
   opacity: 1 !important;
-  background: linear-gradient(135deg, #ff7eb3 0%, #ff9ec8 50%, #ffb8d9 100%);
-  box-shadow: 0 4px 12px rgba(255, 126, 179, 0.5);
+  background: linear-gradient(135deg, #4f46e5 0%, #818cf8 50%, #a5b4fc 100%);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.5);
 }
 
 /* Dark theme */

@@ -4,8 +4,8 @@ import {
   siteInfo,
   personalInfo,
   welcomeConfig,
-  alternateSite,
 } from "../config";
+import { withBase } from "../lib/url";
 import "../styles/global.css";
 import "@fontsource-variable/noto-sans";
 import "@fontsource-variable/noto-sans-jp";
@@ -43,21 +43,13 @@ const pageTitle = title
   ? `${title} · ${siteInfo.title}`
   : `${siteInfo.title} · ${siteInfo.titleSuffix}`;
 const canonical = new URL(Astro.url.pathname, siteInfo.url);
-const alternateLink = alternateSite
-  ? {
-      lang: alternateSite.lang,
-      href: new URL(Astro.url.pathname, alternateSite.url),
-    }
-  : null;
-const defaultUrl =
-  siteInfo.language === "zh-Hant" && alternateLink
-    ? alternateLink.href
-    : canonical;
+// Root-English move (2026-11-19): single-language site — no hreflang
+// tags and no language switcher. <html lang> is "en" (see below).
 const ogImageUrl = new URL(ogImage ?? welcomeConfig.bgImage, siteInfo.url);
 ---
 
 <!doctype html>
-<html lang={siteInfo.language}>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href={siteInfo.favicon} />
@@ -67,7 +59,7 @@ const ogImageUrl = new URL(ogImage ?? welcomeConfig.bgImage, siteInfo.url);
     <meta name="keywords" content={siteInfo.keywords.join(", ")} />
     <meta name="author" content={personalInfo.name} />
     {noindex && <meta name="robots" content="noindex, follow" />}
-    <meta name="theme-color" content="#fff1f1" />
+    <meta name="theme-color" content="#ffffff" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content={siteInfo.title} />
@@ -83,22 +75,11 @@ const ogImageUrl = new URL(ogImage ?? welcomeConfig.bgImage, siteInfo.url);
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang={siteInfo.language} href={canonical} />
-    {alternateLink && (
-      <>
-        <link
-          rel="alternate"
-          hreflang={alternateLink.lang}
-          href={alternateLink.href}
-        />
-        <link rel="alternate" hreflang="x-default" href={defaultUrl} />
-      </>
-    )}
     <link
       rel="alternate"
       type="application/rss+xml"
       title={`${siteInfo.title} RSS`}
-      href="/rss.xml"
+      href={withBase("/rss.xml")}
     />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{pageTitle}</title>
@@ -121,15 +102,7 @@ const ogImageUrl = new URL(ogImage ?? welcomeConfig.bgImage, siteInfo.url);
     <a class="skip-link" href="#main-content">
       {t("common.skip")}
     </a>
-    <Navigation
-      pathname={Astro.url.pathname}
-      alternate={
-        alternateLink
-          ? { url: alternateLink.href.href, label: t("nav.languageSwitch") }
-          : undefined
-      }
-      client:load
-    />
+    <Navigation pathname={Astro.url.pathname} client:load />
     <Search posts={posts} client:load />
     <Welcome
       compact={!home}
@@ -143,15 +116,17 @@ const ogImageUrl = new URL(ogImage ?? welcomeConfig.bgImage, siteInfo.url);
       </main>
     </MainContainer>
     <footer class="site-footer">
-      <a href="/" class="footer-mark">
+      <a href={withBase("/")} class="footer-mark">
         <span class="accent">✿</span> {siteInfo.title}.
       </a>
       <p>{t("footer.message")}</p>
       <p>
         © {new Date().getFullYear()} {personalInfo.englishName} ·{" "}
-        <a href="/rss.xml">{t("common.rss")}</a> ·{" "}
-        <a href="/about/">{t("common.aboutSite")}</a> ·{" "}
-        <a href="/privacy/">{t("common.privacy")}</a>
+        <a href={withBase("/rss.xml")}>{t("common.rss")}</a> ·{" "}
+        <a href={withBase("/about/")}>{t("common.aboutSite")}</a> ·{" "}
+        <a href={withBase("/privacy/")}>{t("common.privacy")}</a> ·{" "}
+        <a href={withBase("/terms/")}>{t("common.terms")}</a> ·{" "}
+        <a href={withBase("/contact/")}>{t("common.contact")}</a>
       </p>
     </footer>
     <button

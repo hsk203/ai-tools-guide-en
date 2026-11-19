@@ -5,6 +5,7 @@ import PostFeed from "../components/posts/PostFeed.vue";
 import PostListFallback from "../components/posts/PostListFallback.astro";
 import { getPosts, summarize } from "../lib/posts";
 import { categoryNames, categoryLabel } from "../data/post-options";
+import { withBase } from "../lib/url";
 const posts = (await getPosts()).map(summarize);
 const counts = new Map(
   categoryNames.map((c) => [c, posts.filter((p) => p.category === c).length]),
@@ -24,7 +25,7 @@ const counts = new Map(
     </div>
     <div class="category-grid">
       {categoryNames.map((c) => (
-        <a class="category-card" href={`/?category=${encodeURIComponent(c)}`}>
+        <a class="category-card" href={withBase(`/?category=${encodeURIComponent(c)}`)}>
           <strong>{categoryLabel(c)}</strong>
           <span>{t("post.records", { count: counts.get(c) ?? 0 })}</span>
         </a>
@@ -42,12 +43,14 @@ const counts = new Map(
     align-items: center;
     gap: 9px;
     color: var(--accent);
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 600;
     margin: 0 0 21px;
-    padding: 11px 15px;
-    border: 1px dashed #ebbbc980;
-    border-radius: 11px;
-    background: #ffffff25;
+    padding: 12px 16px;
+    border: 1px solid #c7d2fe;
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    background: linear-gradient(90deg, #eef2ff 0%, #ecfeff 100%);
   }
   .hello-strip > span:first-child {
     font-size: 17px;
@@ -87,14 +90,22 @@ const counts = new Map(
     gap: 4px;
     padding: 16px;
     border: 1px solid var(--line);
+    border-top: 3px solid var(--accent);
     border-radius: 12px;
     background: var(--card);
     box-shadow: var(--shadow);
     color: var(--text);
     text-decoration: none;
+    transition:
+      transform 0.2s,
+      box-shadow 0.2s,
+      border-color 0.2s;
   }
   .category-card:hover {
     border-color: var(--accent);
+    border-top-color: var(--accent-2);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px #4f46e522;
   }
   .category-card strong {
     font-size: 14px;

@@ -1,0 +1,28 @@
+---
+import { t } from "../i18n";
+import BlogLayout from "../layouts/BlogLayout.astro";
+---
+
+<BlogLayout
+  title={t("terms.title")}
+  heroTitle={t("terms.title")}
+  heroSubtitle={t("terms.updated")}
+>
+  <section class="card page-card">
+    <div class="prose">
+      <p>{t("terms.intro")}</p>
+      <h2>{t("terms.serviceTitle")}</h2>
+      <p>{t("terms.serviceBody")}</p>
+      <h2>{t("terms.copyrightTitle")}</h2>
+      <p>{t("terms.copyrightBody")}</p>
+      <h2>{t("terms.affiliateTitle")}</h2>
+      <p>{t("terms.affiliateBody")}</p>
+      <h2>{t("terms.disclaimerTitle")}</h2>
+      <p>{t("terms.disclaimerBody")}</p>
+      <h2>{t("terms.linksTitle")}</h2>
+      <p>{t("terms.linksBody")}</p>
+      <h2>{t("terms.changesTitle")}</h2>
+      <p>{t("terms.changesBody")}</p>
+    </div>
+  </section>
+</BlogLayout>

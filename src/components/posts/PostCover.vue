@@ -179,8 +179,8 @@ small {
   opacity: 0.5;
 }
 .css {
-  background: #fbe4e5;
-  color: #b76f85;
+  background: #e0e7ff;
+  color: #4f46e5;
 }
 .vue,
 .life {
@@ -188,16 +188,16 @@ small {
   color: #588f7a;
 }
 .notes {
-  background: #f1e5d9;
-  color: #a88969;
+  background: #cffafe;
+  color: #0891b2;
 }
 .typescript {
   background: #dfebf7;
   color: #648db2;
 }
 .git {
-  background: #fae7df;
-  color: #bc7e68;
+  background: #e0e7ff;
+  color: #4f46e5;
 }
 .design {
   background: #e5e6fa;

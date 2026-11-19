@@ -2,6 +2,7 @@
 import { t } from "../../i18n";
 import { personalInfo } from "../../config";
 import { getTags, type PostSummary } from "../../lib/posts";
+import { withBase } from "../../lib/url";
 const props = defineProps<{ posts: PostSummary[] }>();
 </script>
 <template>
@@ -11,7 +12,7 @@ const props = defineProps<{ posts: PostSummary[] }>();
       ><span class="eyebrow">{{ t("author.eyebrow") }}</span
       ><span class="profile-spark">✧</span>
     </div>
-    <a href="/about/" class="avatar-link"
+    <a :href="withBase('/about/')" class="avatar-link"
       ><img
         :src="personalInfo.avatar"
         :alt="personalInfo.name"
@@ -25,13 +26,13 @@ const props = defineProps<{ posts: PostSummary[] }>();
     <p class="profile-role">{{ personalInfo.role }}</p>
     <p class="profile-bio">{{ personalInfo.bio }}</p>
     <div class="profile-stats">
-      <a href="/posts/"
+      <a :href="withBase('/posts/')"
         ><strong>{{ posts.length }}</strong
         ><span>{{ t("nav.posts") }}</span></a
-      ><a href="/posts/"
+      ><a :href="withBase('/posts/')"
         ><strong>{{ new Set(posts.map((p) => p.category)).size }}</strong
         ><span>{{ t("common.categories") }}</span></a
-      ><a href="/posts/#tags"
+      ><a :href="withBase('/posts/#tags')"
         ><strong>{{ getTags(props.posts).length }}</strong
         ><span>{{ t("common.tags") }}</span></a
       >
@@ -90,7 +91,7 @@ const props = defineProps<{ posts: PostSummary[] }>();
   height: 83px;
   border-radius: 26px;
   border: 4px solid var(--card);
-  box-shadow: 0 3px 10px #98637a15;
+  box-shadow: 0 3px 10px #4f46e518;
   object-fit: cover;
   transition: transform 0.3s;
 }

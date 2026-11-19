@@ -1,2 +1,14 @@
-# Cloudflare Pages redirects
-/articles  /posts/  301
+# Cloudflare redirects — root-English move 2026-11-19
+# /en/* -> root (301). Chinese URLs return 410 via worker.js.
+/en/sitemap.xml /sitemap-index.xml 301
+/en/sitemap-0.xml /sitemap-index.xml 301
+/en/articles /posts/ 301
+/en / 301
+/en/ / 301
+/en/* /:splat 301
+/articles /posts/ 301
+/sitemap-en.xml /sitemap-index.xml 301
+/posts/best-ai-image-generators-2026/ /posts/best-ai-image-generators/ 301
+/posts/jasper-vs-writesonic-2026/ /posts/jasper-vs-writesonic/ 301
+/posts/best-ai-meeting-notetakers-2026/ /posts/best-ai-meeting-notetakers/ 301
+/posts/best-ai-voice-generators-2026/ /posts/best-ai-voice-generators/ 301

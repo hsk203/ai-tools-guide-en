@@ -8,16 +8,20 @@ English-original guide to AI tools: comparisons, workflows, and tutorials for co
 
 Kanade theme: Astro 7.3.7 + Tailwind CSS 4.3.3 + Vue 3.5, static output, deployed on Cloudflare Workers (new account 517519203@qq.com).
 
-- Worker: `ai-tools-guide-en` → https://ai-tools-guide-en.517519203.workers.dev
+- Live site: https://aitech8.com (English at root, since 2026-11-19)
 - GitHub: https://github.com/hsk203/ai-tools-guide-en
 - Language: English only (`PUBLIC_SITE_LANGUAGE=en`)
 
 ## Build & deploy
 
 ```bash
-pnpm install
-SITE_URL=https://ai-tools-guide-en.517519203.workers.dev pnpm build
-python3 ~/workspace/goals/goal/hidden_files/run_wrangler.py ~/workspace/goals/goal/hidden_files/ai-tools-guide-en deploy
+pnpm install   # use pnpm 10; pnpm 12 hangs on this VM
+SITE_URL=https://aitech8.com ./node_modules/.bin/astro build
 ```
+
+Then merge into `../ai-tools-guide/dist-merged` and deploy with
+`run_wrangler_aitech8.py` — full steps in `DEPLOY.md`. The 76 old Chinese
+articles are served as 410 by `../ai-tools-guide/worker.js` (never remove);
+`/en/*` URLs 301 to root via `public/_redirects`.
 
 CI (`.github/workflows/ci.yml`) runs format check, audit, and build in 4 language jobs; the e2e step is intentionally skipped (template tests expect sample content that does not exist).

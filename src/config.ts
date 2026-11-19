@@ -7,6 +7,7 @@ import {
   type Language,
   type TranslationKey,
 } from "./i18n";
+import { withBase } from "./lib/url";
 
 // Configure language and identity in site.config.json; edit copy in i18n/*.json.
 export const siteInfo = {
@@ -22,28 +23,49 @@ export const siteInfo = {
   url: import.meta.env.SITE,
 };
 
-// Alternate-language site (Simplified <-> Traditional Chinese). Configure in
-// site.config.json as { "zh-CN": "<zh-CN origin>", "zh-Hant": "<zh-Hant origin>" }.
-// Single-language sites omit it and get no alternate links or language switch.
+// All three language versions of this site on the merged aitech8.com domain.
+// Configure in site.config.json as
+// { "zh-CN": "https://aitech8.com", "zh-Hant": "https://aitech8.com/zh-hant",
+//   "en": "https://aitech8.com/en" } (trailing slash added if missing).
 const alternateSiteConfig = (
   settings as { alternateSite?: Partial<Record<Language, string>> }
 ).alternateSite;
-const alternateSiteUrl =
-  alternateSiteConfig?.[language === "zh-CN" ? "zh-Hant" : "zh-CN"];
-export const alternateSite =
-  alternateSiteUrl && (language === "zh-CN" || language === "zh-Hant")
-    ? {
-        url: alternateSiteUrl,
-        lang: (language === "zh-CN" ? "zh-Hant" : "zh-CN") as Language,
-      }
-    : null;
+function siteUrlFor(lang: Language): string {
+  const raw = alternateSiteConfig?.[lang] ?? "";
+  return raw ? (raw.endsWith("/") ? raw : `${raw}/`) : "";
+}
+export const languageSites: Record<Language, string> = {
+  "zh-CN": siteUrlFor("zh-CN"),
+  "zh-Hant": siteUrlFor("zh-Hant"),
+  en: siteUrlFor("en"),
+  ja: siteUrlFor("ja"),
+};
+// BCP 47 tags for hreflang (zh-CN is emitted as zh-Hans).
+export const hreflangCode: Record<Language, string> = {
+  "zh-CN": "zh-Hans",
+  "zh-Hant": "zh-Hant",
+  en: "en",
+  ja: "ja",
+};
+// Display names for the language switcher (each in its own script).
+export const languageLabels: Record<Language, string> = {
+  "zh-CN": "简体中文",
+  "zh-Hant": "繁體中文",
+  en: "English",
+  ja: "日本語",
+};
 
 export const headerConfig = {
   title: settings.site.logoText,
-  navLinks: settings.navigation.map(({ label, icon, url }) => ({
+  navLinks: settings.navigation.map(({ label, icon, url, children }) => ({
     name: t(label as TranslationKey),
     icon,
-    url,
+    url: withBase(url),
+    children: children?.map((child) => ({
+      name: t(child.label as TranslationKey),
+      icon: child.icon,
+      url: withBase(child.url),
+    })),
   })),
 };
 
@@ -63,6 +85,6 @@ export const personalInfo = {
   socialLinks: settings.socialLinks.map(({ name, label, icon, url }) => ({
     name: label ? t(label as TranslationKey) : name,
     icon,
-    url: url === "$author.github" ? settings.author.github : url,
+    url: url === "$author.github" ? settings.author.github : withBase(url),
   })),
 };
