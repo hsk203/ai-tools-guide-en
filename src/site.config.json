@@ -11,9 +11,9 @@
   }
  },
  "hero": {
-  "image": "/images/hero.webp",
-  "imagePosition": "center 52%",
-  "overlayOpacity": 0.42
+  "image": "/images/hero-refresh.webp",
+  "imagePosition": "center 50%",
+  "overlayOpacity": 0.38
  },
  "alternateSite": {
   "zh-CN": "https://aitech8.com",

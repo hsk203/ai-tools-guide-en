@@ -66,14 +66,14 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
       ),
       radial-gradient(
         ellipse at 18% 14%,
-        color-mix(in srgb, var(--accent-warm) 36%, transparent),
+        color-mix(in srgb, var(--accent) 28%, transparent),
         transparent 42%
       ),
       linear-gradient(
         108deg,
-        rgb(23 12 29 / var(--hero-overlay, 0.42)) 0%,
-        rgb(28 16 39 / calc(var(--hero-overlay, 0.42) * 0.72)) 52%,
-        rgb(9 25 33 / calc(var(--hero-overlay, 0.42) * 0.88)) 100%
+        rgb(8 15 39 / var(--hero-overlay, 0.38)) 0%,
+        rgb(25 20 61 / calc(var(--hero-overlay, 0.38) * 0.78)) 52%,
+        rgb(7 27 41 / calc(var(--hero-overlay, 0.38) * 0.86)) 100%
       );
   }
   .welcome-section::after {
@@ -193,7 +193,7 @@ const Heading = headingLevel === 1 ? "h1" : "h2";
   @media (max-width: 760px) {
     .welcome-section {
       height: 320px;
-      background-position: 58% center;
+      background-position: 50% 52%;
     }
     .hero-content {
       padding-top: 50px;
