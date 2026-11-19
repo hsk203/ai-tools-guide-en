@@ -1,7 +1,14 @@
 <template>
   <span
-    class="flex items-center justify-center bg-subBoxLight dark:bg-subBoxDark h-6 w-6 text-2xl text-subTextLight dark:text-subTextDark rounded-xl hover:shadow-lg transition-all duration-300"
+    class="social-link-icon flex h-6 w-6 items-center justify-center rounded-xl text-2xl transition-all duration-300 hover:shadow-lg"
   >
     <slot></slot>
   </span>
 </template>
+
+<style scoped>
+.social-link-icon {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+</style>

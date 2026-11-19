@@ -92,8 +92,13 @@ const labels: Record<string, { icon: string; title: string; sub: string }> = {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #394fc4;
-  background: linear-gradient(145deg, #e8ebff, #dce4ff);
+  --cover-tone: var(--accent);
+  color: var(--cover-tone);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--cover-tone) 14%, var(--card)),
+    color-mix(in srgb, var(--cover-tone) 24%, var(--card))
+  );
   padding: 28px 12px;
   isolation: isolate;
 }
@@ -144,7 +149,7 @@ const labels: Record<string, { icon: string; title: string; sub: string }> = {
   top: 13px;
   left: 15px;
   font:
-    7px "Oxanium-Medium",
+    9px "Oxanium-Medium",
     var(--font-body);
   letter-spacing: 0.14em;
   opacity: 0.6;
@@ -164,7 +169,7 @@ strong {
 }
 small {
   font:
-    6px "Oxanium-Medium",
+    10px "Oxanium-Medium",
     var(--font-body);
   letter-spacing: 0.12em;
   margin-top: 9px;
@@ -178,40 +183,24 @@ small {
   right: 18px;
   opacity: 0.5;
 }
-.css {
-  background: linear-gradient(145deg, #e4e8ff, #d6dcff);
-  color: #4558df;
+.css,
+.git {
+  --cover-tone: var(--accent);
 }
 .vue,
-.life {
-  background: linear-gradient(145deg, #dff5ec, #ccefe4);
-  color: #178b70;
-}
+.life,
 .notes {
-  background: linear-gradient(145deg, #d4f8f4, #b9eee7);
-  color: #087f83;
+  --cover-tone: var(--accent-2);
 }
-.typescript {
-  background: linear-gradient(145deg, #e0efff, #cfe1fa);
-  color: #2866a5;
-}
-.git {
-  background: linear-gradient(145deg, #e4e8ff, #d6dcff);
-  color: #4558df;
+.typescript,
+.tool {
+  --cover-tone: color-mix(in srgb, var(--accent) 38%, var(--accent-2));
 }
 .design {
-  background: linear-gradient(145deg, #f2e7ff, #e6dcff);
-  color: #8150c4;
-}
-.tool {
-  background: linear-gradient(145deg, #e2f0ff, #d1e8fa);
-  color: #3065a5;
+  --cover-tone: var(--accent-3);
 }
 .featured {
-  background: linear-gradient(140deg, #515fe9, #8956e8 58%, #11a99c);
+  background: var(--accent-gradient);
   color: #fff;
-}
-:global(.dark .post-cover) {
-  filter: brightness(0.75) saturate(0.8);
 }
 </style>

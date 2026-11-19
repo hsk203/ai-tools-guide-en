@@ -185,9 +185,13 @@ onUnmounted(() => {
   font-size: 29px;
   font-family: var(--font-body);
   font-weight: 400;
+  color: var(--accent-2);
+  filter: drop-shadow(
+    0 0 11px color-mix(in srgb, var(--accent-2) 36%, transparent)
+  );
 }
 .brand-dot {
-  color: #818cf8;
+  color: var(--accent-2);
   margin-left: -7px;
 }
 nav {
@@ -213,10 +217,10 @@ nav a.active::after {
   position: absolute;
   bottom: 13px;
   height: 3px;
-  width: 19px;
+  width: 24px;
   border-radius: 2px;
-  background: currentColor;
-  left: calc(50% - 9px);
+  background: var(--accent-gradient);
+  left: calc(50% - 12px);
 }
 .nav-drop {
   position: relative;
@@ -256,6 +260,7 @@ nav a.active::after {
 }
 .nav-dropdown a:hover {
   background: var(--accent-soft);
+  color: var(--accent);
 }
 .nav-dropdown a.active {
   color: var(--accent);
@@ -281,6 +286,7 @@ nav a.active::after {
 }
 .nav-actions button:hover {
   background: #ffffff25;
+  color: var(--accent-2);
   transform: rotate(-8deg);
 }
 .lang-switch {
@@ -347,6 +353,7 @@ nav a.active::after {
 }
 .lang-dropdown a:hover {
   background: var(--accent-soft);
+  color: var(--accent);
 }
 .lang-dropdown a.current {
   color: var(--accent);
@@ -357,10 +364,11 @@ nav a.active::after {
   background: color-mix(in srgb, var(--card) 92%, transparent);
   color: var(--text);
   backdrop-filter: blur(18px);
-  box-shadow: 0 3px 18px #4b314511;
+  box-shadow: 0 10px 32px color-mix(in srgb, var(--text) 9%, transparent);
 }
+.scrolled .brand-flower,
 .scrolled nav a.active,
-.scrolled .brand-flower {
+.menu-open nav a.active {
   color: var(--accent);
 }
 .nav-actions .menu-toggle {
@@ -429,36 +437,5 @@ nav a.active::after {
   nav a {
     font-size: 14px;
   }
-}
-
-.brand-flower {
-  color: #65ead6;
-  filter: drop-shadow(0 0 11px #65ead65c);
-}
-.nav-header:not(.scrolled) .brand-dot {
-  color: #65ead6;
-}
-.nav-header.scrolled,
-.nav-header.menu-open {
-  background: color-mix(in srgb, var(--card) 92%, transparent);
-  box-shadow: 0 10px 32px color-mix(in srgb, #10244a 12%, transparent);
-}
-.scrolled .brand-flower,
-.scrolled nav a.active,
-.menu-open nav a.active {
-  color: var(--accent);
-}
-.nav-actions button:hover {
-  color: var(--accent-2);
-}
-nav a.active::after {
-  height: 3px;
-  width: 24px;
-  left: calc(50% - 12px);
-  background: var(--accent-gradient);
-}
-.nav-dropdown a:hover,
-.lang-dropdown a:hover {
-  color: var(--accent);
 }
 </style>

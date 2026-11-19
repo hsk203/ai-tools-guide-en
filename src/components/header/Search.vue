@@ -216,8 +216,8 @@ kbd {
   min-width: 0;
 }
 .search-result strong {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 550;
 }
 .search-result p {
   font-size: 11px;
@@ -237,6 +237,6 @@ kbd {
   padding-top: 15px;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 10px;
+  font-size: 11px;
 }
 </style>

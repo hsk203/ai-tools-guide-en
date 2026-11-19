@@ -2,9 +2,7 @@
 
 <template>
   <div class="flex flex-col">
-    <div
-      class="main-container flex-1 relative text-kanadeDark bg-kanadeLight dark:bg-kanadeDark dark:text-kanadeLight"
-    >
+    <div class="main-container flex-1 relative">
       <slot />
     </div>
   </div>

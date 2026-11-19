@@ -268,14 +268,14 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
 }
 .feed-title small {
   font:
-    9px "Oxanium-Medium",
+    10px "Oxanium-Medium",
     var(--font-body);
   letter-spacing: 0.12em;
   margin-left: 5px;
   color: var(--muted);
 }
 .feed-count {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
 }
 .feed-tabs {
@@ -331,7 +331,6 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
 }
 .post-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px #4f46e518;
 }
 .cover-link {
   display: block;
@@ -403,7 +402,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
   justify-content: flex-end;
   margin-top: auto;
   gap: 8px;
-  font-size: 10px;
+  font-size: 11px;
 }
 .post-tags {
   display: flex;
@@ -452,7 +451,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
   color: white;
 }
 .pagination > span {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
   margin-left: 8px;
 }
@@ -468,7 +467,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
 .feed-end > span {
   width: 28px;
   height: 1px;
-  background: #c7d2fe;
+  background: var(--line);
 }
 .archive-intro {
   padding: 25px;
@@ -544,7 +543,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
 }
 .post-card {
   border-color: color-mix(in srgb, var(--accent) 9%, var(--line));
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   background: linear-gradient(
     115deg,
     color-mix(in srgb, var(--card) 96%, var(--accent-soft)),
@@ -554,11 +553,11 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
 }
 .post-card:hover {
   border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
-  box-shadow: 0 18px 38px color-mix(in srgb, var(--accent) 13%, transparent);
+  box-shadow: var(--shadow-hover);
 }
 .cover-link {
   margin: 10px 0 10px 10px;
-  border-radius: 14px;
+  border-radius: var(--radius-panel);
 }
 .post-info h3 {
   font-size: 18px;
@@ -594,7 +593,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
 }
 .archive-intro {
   border-top: 3px solid var(--accent);
-  border-radius: 20px;
+  border-radius: var(--radius-card);
   background: linear-gradient(
     135deg,
     var(--card),
@@ -625,7 +624,7 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
     font-size: 11px;
   }
   .post-card {
-    grid-template-columns: 132px minmax(0, 1fr);
+    grid-template-columns: clamp(104px, 34%, 132px) minmax(0, 1fr);
     min-height: 0;
   }
   .cover-link {
@@ -647,11 +646,11 @@ onUnmounted(() => window.removeEventListener("popstate", readUrl));
     margin: 5px 0 6px;
   }
   .post-description {
-    font-size: 11px;
+    font-size: 12px;
     margin-bottom: 8px;
   }
   .post-kicker {
-    font-size: 9px;
+    font-size: 10px;
     gap: 5px;
   }
   .cover-link :deep(strong) {
